@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildDb>
+    <Tool>
+        <Name>linker</Name>
+        <Parent>
+            <Path>C:\0_Work\NBIOT\myFW\ST87_G071_SL_V007\EWARM\ST87_G071xB_SL\Exe\ST87_G071_SL.out</Path>
+            <Output>
+                <Path>C:\0_Work\NBIOT\myFW\ST87_G071_SL_V007\EWARM\ST87_G071xB_SL\List\ST87_G071_SL.map</Path>
+            </Output>
+        </Parent>
+    </Tool>
+</BuildDb>

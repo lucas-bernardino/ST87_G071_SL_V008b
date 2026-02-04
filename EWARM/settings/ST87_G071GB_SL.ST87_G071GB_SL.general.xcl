@@ -1,0 +1,15 @@
+C:\iar\ewarm-9.60.2\arm\bin\armPROC.dll
+
+ C:\iar\ewarm-9.60.2\arm\bin\armSTLINK.dll
+
+ C:\0_Work\NBIOT\myFW\ST87_G071_SL_V007\EWARM\ST87_G071GB_SL\Exe\ST87_G071GB_SL.out
+
+ --plugin=C:\iar\ewarm-9.60.2\arm\bin\armLibSupportUniversal.dll
+
+ --device_macro=C:\iar\ewarm-9.60.2\arm/config/debugger/ST/STM32G0xx.dmac
+
+ --flash_loader=C:\iar\ewarm-9.60.2\arm/config/flashloader/ST/FlashSTM32G08xxB.board
+
+ 
+
+

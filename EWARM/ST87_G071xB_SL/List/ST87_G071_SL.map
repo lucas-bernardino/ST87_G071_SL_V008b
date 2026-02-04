@@ -1,0 +1,1553 @@
+###############################################################################
+#
+# IAR ELF Linker V9.70.1.475/W64 for ARM                  03/Feb/2026  18:19:18
+# Copyright 2007-2025 IAR Systems AB.
+#
+#    Output file  =
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Exe\ST87_G071_SL.out
+#    Map file     =
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\List\ST87_G071_SL.map
+#    Command line =
+#        -f
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Exe\ST87_G071_SL.out.rsp
+#        (C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\Core_13247989168731456611.dir\app_freertos.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\m2m_modem_2353766246464904183.dir\app_modem_read.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\Apps_139222153124407364.dir\cloud_module.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\FreeRTOS_4809373609813369194.dir\cmsis_os2.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\Apps_139222153124407364.dir\crc.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\FreeRTOS_4809373609813369194.dir\croutine.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\FreeRTOS_4809373609813369194.dir\event_groups.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\FreeRTOS_4809373609813369194.dir\heap_4.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\BSP_16987466797925798938.dir\lis2du12_reg.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\BSP_16987466797925798938.dir\lis2dux12_reg.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\BSP_16987466797925798938.dir\lis2dw12_reg.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\FreeRTOS_4809373609813369194.dir\list.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\Apps_139222153124407364.dir\m2m_modem.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\Core_13247989168731456611.dir\main.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\Apps_139222153124407364.dir\mem_pool.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\Apps_139222153124407364.dir\metro_hif.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\Apps_139222153124407364.dir\metrology_module.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\m2m_modem_2353766246464904183.dir\modem_event_buffer.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\m2m_modem_2353766246464904183.dir\modem_globals.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\m2m_modem_2353766246464904183.dir\modem_interface.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\m2m_modem_2353766246464904183.dir\modem_main.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\m2m_modem_2353766246464904183.dir\modem_module.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\m2m_modem_2353766246464904183.dir\modem_ring_buffer.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\FreeRTOS_4809373609813369194.dir\port.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\FreeRTOS_4809373609813369194.dir\portasm.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\FreeRTOS_4809373609813369194.dir\queue.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\Apps_139222153124407364.dir\Sensor_module.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\EWARM_18443280873093131863.dir\startup_stm32g071xx.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\BSP_16987466797925798938.dir\stm32_st87m01.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_hal.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_hal_cortex.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_hal_dma.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_hal_dma_ex.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_hal_exti.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_hal_flash.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_hal_flash_ex.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_hal_gpio.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_hal_i2c.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_hal_i2c_ex.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\Core_13247989168731456611.dir\stm32g0xx_hal_msp.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_hal_pwr.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_hal_pwr_ex.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_hal_rcc.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_hal_rcc_ex.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_hal_tim.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_hal_tim_ex.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\Core_13247989168731456611.dir\stm32g0xx_hal_timebase_tim.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_hal_uart.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_hal_uart_ex.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\Core_13247989168731456611.dir\stm32g0xx_it.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_ll_exti.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_ll_gpio.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_ll_rcc.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_ll_utils.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\FreeRTOS_4809373609813369194.dir\stream_buffer.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\CMSIS_6603591812247902717.dir\system_stm32g0xx.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\Apps_139222153124407364.dir\task_comm.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\FreeRTOS_4809373609813369194.dir\tasks.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\FreeRTOS_4809373609813369194.dir\timers.o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\Libs_3913195376021097889.dir\utilities.o
+#        --no_out_extension -o
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Exe\ST87_G071_SL.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\List\ST87_G071_SL.map
+#        --config
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM/stm32g071xx_flash.icf
+#        --semihosting --entry __iar_program_start --vfe --text_out locale
+#        --cpu=Cortex-M0+ --fpu=None) --diagnostics_format=sarif_stdout
+#        --dependencies=n
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Exe\ST87_G071_SL.out.iar_deps
+#        --dynamic_output
+#        C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Exe\ST87_G071_SL.out.iar_dynout
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__CPP_Runtime   = 1
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because --advanced_heap
+was not specified and the application did not appear to
+be primarily optimized for speed.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 {  ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x801'ffff] {  ro };
+define block CSTACK with size = 2K, alignment = 8 { };
+define block HEAP with size = 1K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'8fff] {
+           rw,  block CSTACK,  block HEAP };
+initialize by copy {  rw };
+
+  Section            Kind         Address  Alignment    Size  Object
+  -------            ----         -------  ---------    ----  ------
+"A0":                                                   0xbc
+  .intvec            ro code   0x800'0000          4    0xbc  startup_stm32g071xx.o [5]
+                             - 0x800'00bc               0xbc
+
+"P1":                                                 0xce58
+  .text              ro code   0x800'00bc          4  0x1818  modem_module.o [9]
+  .text              ro code   0x800'18d4          4    0x4e  ABImemset.o [12]
+  .text              ro code   0x800'1922          2    0x3e  packbits_init_single.o [12]
+  .text              ro code   0x800'1960          4   0x120  modem_ring_buffer.o [9]
+  .text              ro code   0x800'1a80          4   0x16c  modem_event_buffer.o [9]
+  .text              ro code   0x800'1bec          4   0x4bc  stm32g0xx_hal_tim.o [8]
+  .text              ro code   0x800'20a8          4   0x74e  main.o [4]
+  .text              ro code   0x800'27f6          2     0xa  xsprout.o [10]
+  .text              ro code   0x800'2800          4  0x148c  stm32g0xx_hal_uart.o [8]
+  .text              ro code   0x800'3c8c          2    0x2e  strstr.o [10]
+  .rodata            const     0x800'3cba          2     0x2  xlocale_c.o [10]
+  .text              ro code   0x800'3cbc          4     0xe  strlen.o [12]
+  .text              ro code   0x800'3cca          2     0x2  startup_stm32g071xx.o [5]
+  .text              ro code   0x800'3ccc          4    0x40  sprintf.o [10]
+  .text              ro code   0x800'3d0c          4    0x12  strchr.o [12]
+  .text              ro code   0x800'3d1e          2     0x2  startup_stm32g071xx.o [5]
+  .text              ro code   0x800'3d20          4    0x4e  ABImemcpy.o [12]
+  .text              ro code   0x800'3d6e          2     0x2  startup_stm32g071xx.o [5]
+  .text              ro code   0x800'3d70          4   0x6d4  modem_interface.o [9]
+  .text              ro code   0x800'4444          4   0x2dc  modem_main.o [9]
+  .text              ro code   0x800'4720          4   0x420  cmsis_os2.o [6]
+  .text              ro code   0x800'4b40          4   0x394  stm32g0xx_hal_gpio.o [8]
+  .text              ro code   0x800'4ed4          4   0x4cc  stm32g0xx_hal_dma.o [8]
+  .text              ro code   0x800'53a0          2    0xe0  I32DivModFast.o [12]
+  .text              ro code   0x800'5480          4   0x1f0  stm32_st87m01.o [2]
+  .text              ro code   0x800'5670          2     0x2  stm32g0xx_hal_tim.o [8]
+  .text              ro code   0x800'5672          2     0x2  stm32g0xx_hal_tim.o [8]
+  .text              ro code   0x800'5674          2     0x2  stm32g0xx_hal_tim.o [8]
+  .text              ro code   0x800'5676          2     0x2  stm32g0xx_hal_tim_ex.o [8]
+  .text              ro code   0x800'5678          2     0x2  stm32g0xx_hal_tim_ex.o [8]
+  .text              ro code   0x800'567a          2     0x2  stm32g0xx_hal_tim.o [8]
+  .text              ro code   0x800'567c          2     0x2  stm32g0xx_hal_tim_ex.o [8]
+  .text              ro code   0x800'567e          2     0x2  startup_stm32g071xx.o [5]
+  .text              ro code   0x800'5680          4    0x44  stm32g0xx_hal.o [8]
+  .text              ro code   0x800'56c4          4    0x2c  stm32g0xx_hal.o [8]
+  .text              ro code   0x800'56f0          4    0x58  stm32g0xx_hal_pwr_ex.o [8]
+  .text              ro code   0x800'5748          4   0x7c0  stm32g0xx_hal_rcc.o [8]
+  .text              ro code   0x800'5f08          4   0x840  stm32g0xx_hal_i2c.o [8]
+  .text              ro code   0x800'6748          4    0xd0  stm32g0xx_hal_i2c_ex.o [8]
+  .text              ro code   0x800'6818          4    0x8c  stm32g0xx_hal_tim_ex.o [8]
+  .text              ro code   0x800'68a4          4   0x178  stm32g0xx_hal_uart_ex.o [8]
+  .text              ro code   0x800'6a1c          4   0x104  stm32g0xx_hal_cortex.o [8]
+  .text              ro code   0x800'6b20          4   0x186  stm32g0xx_ll_exti.o [8]
+  .text              ro code   0x800'6ca6          2     0x2  startup_stm32g071xx.o [5]
+  .text              ro code   0x800'6ca8          4   0x134  stm32g0xx_ll_gpio.o [8]
+  .text              ro code   0x800'6ddc          4    0x68  m2m_modem.o [1]
+  .text              ro code   0x800'6e44          4   0x450  cloud_module.o [1]
+  .text              ro code   0x800'7294          4   0x2c0  metrology_module.o [1]
+  .text              ro code   0x800'7554          4   0x3d4  Sensor_module.o [1]
+  .text              ro code   0x800'7928          4    0x18  stm32g0xx_hal.o [8]
+  .text              ro code   0x800'7940          4   0x2c0  stm32g0xx_hal_msp.o [4]
+  .text              ro code   0x800'7c00          2     0x2  stm32g0xx_hal_uart.o [8]
+  .text              ro code   0x800'7c02          2     0x2  stm32g0xx_hal_uart.o [8]
+  .text              ro code   0x800'7c04          2     0x2  stm32g0xx_hal_uart_ex.o [8]
+  .text              ro code   0x800'7c06          2     0x2  stm32g0xx_hal_uart_ex.o [8]
+  .text              ro code   0x800'7c08          2     0x2  stm32g0xx_hal_uart_ex.o [8]
+  .text              ro code   0x800'7c0a          2     0x2  startup_stm32g071xx.o [5]
+  .text              ro code   0x800'7c0c          4    0x32  I64Mul.o [12]
+  .text              ro code   0x800'7c3e          2    0x7c  I64DivMod.o [12]
+  .text              ro code   0x800'7cba          2     0x2  startup_stm32g071xx.o [5]
+  .text              ro code   0x800'7cbc          4     0xc  stm32g0xx_hal.o [8]
+  .text              ro code   0x800'7cc8          2     0x2  stm32g0xx_hal_uart.o [8]
+  .text              ro code   0x800'7cca          2     0x2  startup_stm32g071xx.o [5]
+  .text              ro code   0x800'7ccc          4   0xf86  xprintffull_nomb.o [10]
+  .text              ro code   0x800'8c52          2     0x2  startup_stm32g071xx.o [5]
+  .text              ro code   0x800'8c54          4   0x8e0  tasks.o [6]
+  .text              ro code   0x800'9534          4   0x108  port.o [6]
+  .text              ro code   0x800'963c          4   0x730  queue.o [6]
+  .text              ro code   0x800'9d6c          4     0x2  IntDivZer.o [12]
+  .text              ro code   0x800'9d6e          2     0x2  startup_stm32g071xx.o [5]
+  .text              ro code   0x800'9d70          4   0x274  stm32g0xx_hal_rcc_ex.o [8]
+  .text              ro code   0x800'9fe4          4    0xc4  stm32g0xx_hal_timebase_tim.o [4]
+  .text              ro code   0x800'a0a8          4   0x4a8  metro_hif.o [1]
+  .text              ro code   0x800'a550          4   0xc8e  lis2dux12_reg.o [2]
+  .text              ro code   0x800'b1de          2   0x120  FltAddSub.o [11]
+  .text              ro code   0x800'b2fe          2     0x2  startup_stm32g071xx.o [5]
+  .text              ro code   0x800'b300          4    0x36  IxxToFlt.o [11]
+  .text              ro code   0x800'b336          2    0xa4  FltDiv.o [11]
+  .text              ro code   0x800'b3da          2     0x2  startup_stm32g071xx.o [5]
+  .text              ro code   0x800'b3dc          4     0x2  I64DivZer.o [12]
+  .text              ro code   0x800'b3de          2     0x2  startup_stm32g071xx.o [5]
+  .text              ro code   0x800'b3e0          4    0x48  xfail_s.o [10]
+  .text              ro code   0x800'b428          4    0x16  memchr.o [12]
+  .text              ro code   0x800'b43e          2    0x2a  frexp.o [11]
+  .text              ro code   0x800'b468          2    0x32  DblCmpLe.o [11]
+  .text              ro code   0x800'b49a          2    0x32  DblCmpGe.o [11]
+  .text              ro code   0x800'b4cc          2    0x70  ldexp.o [11]
+  .text              ro code   0x800'b53c          4    0x52  DblToI32.o [11]
+  .text              ro code   0x800'b58e          2     0x2  startup_stm32g071xx.o [5]
+  .text              ro code   0x800'b590          4    0x34  IxxToDbl.o [11]
+  .text              ro code   0x800'b5c4          2   0x1a8  DblAddSub.o [11]
+  .text              ro code   0x800'b76c          2    0xc2  DblDiv.o [11]
+  .text              ro code   0x800'b82e          2   0x184  DblMul.o [11]
+  .text              ro code   0x800'b9b2          2     0x2  startup_stm32g071xx.o [5]
+  .text              ro code   0x800'b9b4          4     0xc  xlocale_c.o [10]
+  .text              ro code   0x800'b9c0          4   0x234  heap_4.o [6]
+  .text              ro code   0x800'bbf4          2    0x9c  list.o [6]
+  .text              ro code   0x800'bc90          4    0x18  cmsis_os2.o [6]
+  .text              ro code   0x800'bca8          4   0x448  timers.o [6]
+  CODE               ro code   0x800'c0f0          4    0x7c  portasm.o [6]
+  .text              ro code   0x800'c16c          4    0x14  uwrite4.o [12]
+  .text              ro code   0x800'c180          4    0x38  crc.o [1]
+  .text              ro code   0x800'c1b8          4    0x24  ABIassert.o [13]
+  .text              ro code   0x800'c1dc          2    0xb0  FltMul.o [11]
+  .text              ro code   0x800'c28c          2    0x24  lis2dux12_reg.o [2]
+  .text              ro code   0x800'c2b0          2    0x24  lis2dux12_reg.o [2]
+  .text              ro code   0x800'c2d4          2     0xa  abort.o [10]
+  .text              ro code   0x800'c2de          2     0x2  startup_stm32g071xx.o [5]
+  .text              ro code   0x800'c2e0          4    0x18  cmsis_os2.o [6]
+  .text              ro code   0x800'c2f8          4    0x14  exit.o [13]
+  .text              ro code   0x800'c30c          4    0x2c  iarttio.o [13]
+  .text              ro code   0x800'c338          4     0x8  XShttio.o [10]
+  .rodata            const     0x800'c340          4   0x200  crc.o [1]
+  .text              ro code   0x800'c540          4    0xf4  stm32g0xx_it.o [4]
+  .rodata            const     0x800'c634          4    0x70  metro_hif.o [1]
+  .rodata            const     0x800'c6a4          4    0x6a  xprintffull_nomb.o [10]
+  .text              ro code   0x800'c70e          2     0x2  startup_stm32g071xx.o [5]
+  .rodata            const     0x800'c710          4    0x60  modem_main.o [9]
+  .rodata            const     0x800'c770          4    0x48  metro_hif.o [1]
+  .rodata            const     0x800'c7b8          4    0x40  metro_hif.o [1]
+  .rodata            const     0x800'c7f8          4    0x40  system_stm32g0xx.o [3]
+  .text              ro code   0x800'c838          2    0x3c  zero_init3.o [12]
+  .rodata            const     0x800'c874          4    0x2c  modem_module.o [9]
+  .rodata            const     0x800'c8a0          4    0x28  modem_module.o [9]
+  .text              ro code   0x800'c8c8          4    0x28  data_init.o [12]
+  .rodata            const     0x800'c8f0          4    0x24  main.o [4]
+  .rodata            const     0x800'c914          4    0x24  main.o [4]
+  .rodata            const     0x800'c938          4    0x24  main.o [4]
+  .rodata            const     0x800'c95c          4    0x24  main.o [4]
+  .rodata            const     0x800'c980          4    0x24  modem_module.o [9]
+  .rodata            const     0x800'c9a4          4    0x24  modem_module.o [9]
+  .text              ro code   0x800'c9c8          4    0x22  cmain.o [12]
+  .text              ro code   0x800'c9ea          2     0x4  low_level_init.o [10]
+  .text              ro code   0x800'c9ee          2     0x8  exit.o [10]
+  .text              ro code   0x800'c9f6          2     0x2  startup_stm32g071xx.o [5]
+  .text              ro code   0x800'c9f8          4     0x4  cexit.o [12]
+  .text              ro code   0x800'c9fc          4     0xa  cexit_2.o [12]
+  .iar.init_table    const     0x800'ca08          4    0x20  - Linker created -
+  .text              ro code   0x800'ca28          2     0x2  startup_stm32g071xx.o [5]
+  .rodata            const     0x800'ca2c          4    0x20  modem_module.o [9]
+  .rodata            const     0x800'ca4c          4    0x20  system_stm32g0xx.o [3]
+  .rodata            const     0x800'ca6c          4    0x1c  modem_interface.o [9]
+  .rodata            const     0x800'ca88          4    0x1c  modem_interface.o [9]
+  .rodata            const     0x800'caa4          4    0x1c  modem_module.o [9]
+  .text              ro code   0x800'cac0          4    0x1c  cstartup_M.o [12]
+  .rodata            const     0x800'cadc          4    0x18  main.o [4]
+  .rodata            const     0x800'caf4          4    0x18  main.o [4]
+  .rodata            const     0x800'cb0c          4    0x18  main.o [4]
+  .rodata            const     0x800'cb24          4    0x18  main.o [4]
+  .rodata            const     0x800'cb3c          4    0x18  main.o [4]
+  .rodata            const     0x800'cb54          4    0x18  main.o [4]
+  .rodata            const     0x800'cb6c          4    0x18  modem_module.o [9]
+  .rodata            const     0x800'cb84          4    0x18  modem_module.o [9]
+  .rodata            const     0x800'cb9c          4    0x18  modem_module.o [9]
+  .rodata            const     0x800'cbb4          4    0x18  stm32g0xx_hal_uart.o [8]
+  .rodata            const     0x800'cbcc          4    0x14  main.o [4]
+  .rodata            const     0x800'cbe0          4    0x14  metro_hif.o [1]
+  .rodata            const     0x800'cbf4          4    0x14  modem_interface.o [9]
+  .rodata            const     0x800'cc08          4    0x14  modem_module.o [9]
+  .rodata            const     0x800'cc1c          4    0x10  main.o [4]
+  .rodata            const     0x800'cc2c          4    0x10  main.o [4]
+  .rodata            const     0x800'cc3c          4    0x10  main.o [4]
+  .rodata            const     0x800'cc4c          4    0x10  metro_hif.o [1]
+  .rodata            const     0x800'cc5c          4    0x10  metro_hif.o [1]
+  .rodata            const     0x800'cc6c          4    0x10  modem_interface.o [9]
+  .rodata            const     0x800'cc7c          4    0x10  modem_interface.o [9]
+  .rodata            const     0x800'cc8c          4    0x10  modem_main.o [9]
+  .rodata            const     0x800'cc9c          4    0x10  modem_module.o [9]
+  .rodata            const     0x800'ccac          4    0x10  modem_module.o [9]
+  .rodata            const     0x800'ccbc          4    0x10  modem_module.o [9]
+  .rodata            const     0x800'cccc          4    0x10  modem_module.o [9]
+  .rodata            const     0x800'ccdc          4    0x10  modem_module.o [9]
+  .text              ro code   0x800'ccec          4    0x10  startup_stm32g071xx.o [5]
+  .rodata            const     0x800'ccfc          4     0xc  main.o [4]
+  .rodata            const     0x800'cd08          4     0xc  main.o [4]
+  .rodata            const     0x800'cd14          4     0xc  main.o [4]
+  .rodata            const     0x800'cd20          4     0xc  main.o [4]
+  .rodata            const     0x800'cd2c          4     0xc  main.o [4]
+  .rodata            const     0x800'cd38          4     0xc  main.o [4]
+  .rodata            const     0x800'cd44          4     0xc  modem_interface.o [9]
+  .rodata            const     0x800'cd50          4     0xc  modem_interface.o [9]
+  .rodata            const     0x800'cd5c          4     0xc  modem_interface.o [9]
+  .rodata            const     0x800'cd68          4     0xc  modem_interface.o [9]
+  .rodata            const     0x800'cd74          4     0xc  modem_interface.o [9]
+  .rodata            const     0x800'cd80          4     0xc  modem_interface.o [9]
+  .rodata            const     0x800'cd8c          4     0xc  modem_interface.o [9]
+  .rodata            const     0x800'cd98          4     0xc  modem_interface.o [9]
+  .rodata            const     0x800'cda4          4     0xc  modem_interface.o [9]
+  .rodata            const     0x800'cdb0          4     0xc  modem_interface.o [9]
+  .rodata            const     0x800'cdbc          4     0xc  modem_module.o [9]
+  .rodata            const     0x800'cdc8          4     0xc  modem_module.o [9]
+  .rodata            const     0x800'cdd4          4     0xc  modem_module.o [9]
+  .rodata            const     0x800'cde0          4     0xc  modem_module.o [9]
+  .rodata            const     0x800'cdec          4     0xc  modem_module.o [9]
+  .rodata            const     0x800'cdf8          4     0xc  modem_module.o [9]
+  .rodata            const     0x800'ce04          4     0x8  modem_interface.o [9]
+  .rodata            const     0x800'ce0c          4     0x8  modem_interface.o [9]
+  .rodata            const     0x800'ce14          4     0x8  modem_module.o [9]
+  .rodata            const     0x800'ce1c          4     0x8  modem_module.o [9]
+  .rodata            const     0x800'ce24          4     0x8  modem_module.o [9]
+  .rodata            const     0x800'ce2c          4     0x8  modem_module.o [9]
+  .rodata            const     0x800'ce34          4     0x8  modem_module.o [9]
+  .rodata            const     0x800'ce3c          4     0x8  modem_module.o [9]
+  .rodata            const     0x800'ce44          4     0x8  modem_module.o [9]
+  .rodata            const     0x800'ce4c          4     0x8  modem_module.o [9]
+  .rodata            const     0x800'ce54          4     0x8  modem_module.o [9]
+  .rodata            const     0x800'ce5c          4     0x8  modem_module.o [9]
+  .rodata            const     0x800'ce64          4     0x8  modem_module.o [9]
+  .rodata            const     0x800'ce6c          4     0x8  modem_module.o [9]
+  .rodata            const     0x800'ce74          4     0x8  modem_module.o [9]
+  .rodata            const     0x800'ce7c          4     0x8  stm32g0xx_hal_uart_ex.o [8]
+  .rodata            const     0x800'ce84          4     0x8  stm32g0xx_hal_uart_ex.o [8]
+  .rodata            const     0x800'ce8c          4     0x8  tasks.o [6]
+  .rodata            const     0x800'ce94          4     0x8  timers.o [6]
+  .rodata            const     0x800'ce9c          4     0x8  timers.o [6]
+  .rodata            const     0x800'cea4          4     0x4  heap_4.o [6]
+  .text              ro code   0x800'cea8          2     0x2  startup_stm32g071xx.o [5]
+  .text              ro code   0x800'ceaa          2     0x2  startup_stm32g071xx.o [5]
+  .text              ro code   0x800'ceac          4     0x2  system_stm32g0xx.o [3]
+  .rodata            const     0x800'ceae                0x1  xlocale_c.o [10]
+  .rodata            const     0x800'ceaf                0x0  zero_init3.o [12]
+  .rodata            const     0x800'ceaf                0x0  packbits_init_single.o [12]
+  Initializer bytes  const     0x800'ceaf               0x65  <for P2-1>
+                             - 0x800'cf14             0xce58
+
+"P2", part 1 of 3:                                      0x76
+  P2-1                        0x2000'0000               0x76  <Init block>
+    .data            inited   0x2000'0000          4    0x10  cloud_module.o [1]
+    .data            inited   0x2000'0010          4    0x14  cloud_module.o [1]
+    .data            inited   0x2000'0024          4     0x4  modem_main.o [9]
+    .data            inited   0x2000'0028          4     0x4  port.o [6]
+    .data            inited   0x2000'002c          4     0x4  stm32g0xx_hal.o [8]
+    .data            inited   0x2000'0030          4     0x4  system_stm32g0xx.o [3]
+    .data            inited   0x2000'0034          4    0x38  xlocale_c.o [10]
+    .data            inited   0x2000'006c          4     0x8  XShttio.o [10]
+    .data            inited   0x2000'0074                0x1  cloud_module.o [1]
+    .data            inited   0x2000'0075                0x1  stm32g0xx_hal.o [8]
+                            - 0x2000'0076               0x76
+
+"P2", part 2 of 3:                                    0x71e4
+  .bss               zero     0x2000'0078          4  0x2ee0  heap_4.o [6]
+  .bss               zero     0x2000'2f58          4   0xbb8  modem_globals.o [9]
+  .bss               zero     0x2000'3b10          4   0x6d8  modem_globals.o [9]
+  .bss               zero     0x2000'41e8          4   0x6d8  modem_module.o [9]
+  .bss               zero     0x2000'48c0          4   0x4b0  modem_globals.o [9]
+  .bss               zero     0x2000'4d70          4   0x4b0  modem_module.o [9]
+  .bss               zero     0x2000'5220          4   0x4b0  modem_ring_buffer.o [9]
+  .bss               zero     0x2000'56d0          4   0x460  tasks.o [6]
+  .bss               zero     0x2000'5b30          4   0x400  cmsis_os2.o [6]
+  .bss               zero     0x2000'5f30          4   0x3e8  modem_event_buffer.o [9]
+  .bss               zero     0x2000'6318          4   0x200  cmsis_os2.o [6]
+  .bss               zero     0x2000'6518          4   0x200  metro_hif.o [1]
+  .bss               zero     0x2000'6718          4    0xa0  timers.o [6]
+  .bss               zero     0x2000'67b8          4    0x94  main.o [4]
+  .bss               zero     0x2000'684c          4    0x94  main.o [4]
+  .bss               zero     0x2000'68e0          4    0x94  main.o [4]
+  .bss               zero     0x2000'6974          4    0x94  modem_globals.o [9]
+  .bss               zero     0x2000'6a08          4    0x78  modem_globals.o [9]
+  .bss               zero     0x2000'6a80          4    0x5c  cmsis_os2.o [6]
+  .bss               zero     0x2000'6adc          4    0x5c  cmsis_os2.o [6]
+  .bss               zero     0x2000'6b38          4    0x5c  main.o [4]
+  .bss               zero     0x2000'6b94          4    0x5c  stm32_st87m01.o [2]
+  .bss               zero     0x2000'6bf0          4    0x54  main.o [4]
+  .bss               zero     0x2000'6c44          4    0x50  timers.o [6]
+  .bss               zero     0x2000'6c94          4    0x4c  main.o [4]
+  .bss               zero     0x2000'6ce0          4    0x4c  modem_globals.o [9]
+  .bss               zero     0x2000'6d2c          4    0x4c  modem_globals.o [9]
+  .bss               zero     0x2000'6d78          4    0x4c  stm32g0xx_hal_timebase_tim.o [4]
+  .bss               zero     0x2000'6dc4          4    0x44  metro_hif.o [1]
+  .bss               zero     0x2000'6e08          4    0x44  modem_module.o [9]
+  .bss               zero     0x2000'6e4c          4    0x40  metro_hif.o [1]
+  .bss               zero     0x2000'6e8c          4    0x40  modem_globals.o [9]
+  .bss               zero     0x2000'6ecc          4    0x40  queue.o [6]
+  .bss               zero     0x2000'6f0c          4    0x2c  modem_main.o [9]
+  .bss               zero     0x2000'6f38          4    0x28  cloud_module.o [1]
+  .bss               zero     0x2000'6f60          4    0x28  Sensor_module.o [1]
+  .bss               zero     0x2000'6f88          4    0x24  modem_globals.o [9]
+  .bss               zero     0x2000'6fac          4    0x18  metro_hif.o [1]
+  .bss               zero     0x2000'6fc4               0x17  modem_globals.o [9]
+  .bss               zero     0x2000'6fdb                0x1  cloud_module.o [1]
+  .bss               zero     0x2000'6fdc          4    0x14  cloud_module.o [1]
+  .bss               zero     0x2000'6ff0          4    0x14  metrology_module.o [1]
+  .bss               zero     0x2000'7004          4    0x14  metrology_module.o [1]
+  .bss               zero     0x2000'7018          4    0x14  modem_globals.o [9]
+  .bss               zero     0x2000'702c          4    0x14  Sensor_module.o [1]
+  .bss               zero     0x2000'7040          4    0x14  tasks.o [6]
+  .bss               zero     0x2000'7054          4    0x14  tasks.o [6]
+  .bss               zero     0x2000'7068          4    0x14  tasks.o [6]
+  .bss               zero     0x2000'707c          4    0x14  tasks.o [6]
+  .bss               zero     0x2000'7090          4    0x14  tasks.o [6]
+  .bss               zero     0x2000'70a4          4    0x14  timers.o [6]
+  .bss               zero     0x2000'70b8          4    0x14  timers.o [6]
+  .bss               zero     0x2000'70cc          4    0x10  cloud_module.o [1]
+  .bss               zero     0x2000'70dc          4    0x10  Sensor_module.o [1]
+  .bss               zero     0x2000'70ec          4    0x10  Sensor_module.o [1]
+  .bss               zero     0x2000'70fc          4     0xc  Sensor_module.o [1]
+  .bss               zero     0x2000'7108          4     0x8  heap_4.o [6]
+  .bss               zero     0x2000'7110          4     0x8  metro_hif.o [1]
+  .bss               zero     0x2000'7118          4     0x8  modem_module.o [9]
+  .bss               zero     0x2000'7120          4     0x8  Sensor_module.o [1]
+  .bss               zero     0x2000'7128          4     0x4  cloud_module.o [1]
+  .bss               zero     0x2000'712c          4     0x4  cloud_module.o [1]
+  .bss               zero     0x2000'7130          4     0x4  cloud_module.o [1]
+  .bss               zero     0x2000'7134          4     0x4  cloud_module.o [1]
+  .bss               zero     0x2000'7138          4     0x4  cloud_module.o [1]
+  .bss               zero     0x2000'713c          4     0x4  cloud_module.o [1]
+  .bss               zero     0x2000'7140          4     0x4  cmsis_os2.o [6]
+  .bss               zero     0x2000'7144          4     0x4  heap_4.o [6]
+  .bss               zero     0x2000'7148          4     0x4  heap_4.o [6]
+  .bss               zero     0x2000'714c          4     0x4  heap_4.o [6]
+  .bss               zero     0x2000'7150          4     0x4  heap_4.o [6]
+  .bss               zero     0x2000'7154          4     0x4  heap_4.o [6]
+  .bss               zero     0x2000'7158          4     0x4  heap_4.o [6]
+  .bss               zero     0x2000'715c          4     0x4  main.o [4]
+  .bss               zero     0x2000'7160          4     0x4  main.o [4]
+  .bss               zero     0x2000'7164          4     0x4  main.o [4]
+  .bss               zero     0x2000'7168          4     0x4  main.o [4]
+  .bss               zero     0x2000'716c          4     0x4  main.o [4]
+  .bss               zero     0x2000'7170          4     0x4  main.o [4]
+  .bss               zero     0x2000'7174          4     0x4  main.o [4]
+  .bss               zero     0x2000'7178          4     0x4  main.o [4]
+  .bss               zero     0x2000'717c          4     0x4  main.o [4]
+  .bss               zero     0x2000'7180          4     0x4  main.o [4]
+  .bss               zero     0x2000'7184          4     0x4  metro_hif.o [1]
+  .bss               zero     0x2000'7188          4     0x4  metro_hif.o [1]
+  .bss               zero     0x2000'718c          4     0x4  metrology_module.o [1]
+  .bss               zero     0x2000'7190          4     0x4  metrology_module.o [1]
+  .bss               zero     0x2000'7194          4     0x4  metrology_module.o [1]
+  .bss               zero     0x2000'7198          4     0x4  metrology_module.o [1]
+  .bss               zero     0x2000'719c          4     0x4  metrology_module.o [1]
+  .bss               zero     0x2000'71a0          4     0x4  metrology_module.o [1]
+  .bss               zero     0x2000'71a4          4     0x4  metrology_module.o [1]
+  .bss               zero     0x2000'71a8          4     0x4  modem_globals.o [9]
+  .bss               zero     0x2000'71ac          4     0x4  modem_globals.o [9]
+  .bss               zero     0x2000'71b0          4     0x4  modem_globals.o [9]
+  .bss               zero     0x2000'71b4          4     0x4  modem_interface.o [9]
+  .bss               zero     0x2000'71b8          4     0x4  modem_main.o [9]
+  .bss               zero     0x2000'71bc          4     0x4  modem_main.o [9]
+  .bss               zero     0x2000'71c0          4     0x4  modem_main.o [9]
+  .bss               zero     0x2000'71c4          4     0x4  modem_main.o [9]
+  .bss               zero     0x2000'71c8          4     0x4  modem_module.o [9]
+  .bss               zero     0x2000'71cc          4     0x4  modem_module.o [9]
+  .bss               zero     0x2000'71d0          4     0x4  modem_module.o [9]
+  .bss               zero     0x2000'71d4          4     0x4  modem_module.o [9]
+  .bss               zero     0x2000'71d8          4     0x4  Sensor_module.o [1]
+  .bss               zero     0x2000'71dc          4     0x4  Sensor_module.o [1]
+  .bss               zero     0x2000'71e0          4     0x4  Sensor_module.o [1]
+  .bss               zero     0x2000'71e4          4     0x4  stm32g0xx_hal.o [8]
+  .bss               zero     0x2000'71e8          4     0x4  tasks.o [6]
+  .bss               zero     0x2000'71ec          4     0x4  tasks.o [6]
+  .bss               zero     0x2000'71f0          4     0x4  tasks.o [6]
+  .bss               zero     0x2000'71f4          4     0x4  tasks.o [6]
+  .bss               zero     0x2000'71f8          4     0x4  tasks.o [6]
+  .bss               zero     0x2000'71fc          4     0x4  tasks.o [6]
+  .bss               zero     0x2000'7200          4     0x4  tasks.o [6]
+  .bss               zero     0x2000'7204          4     0x4  tasks.o [6]
+  .bss               zero     0x2000'7208          4     0x4  tasks.o [6]
+  .bss               zero     0x2000'720c          4     0x4  tasks.o [6]
+  .bss               zero     0x2000'7210          4     0x4  tasks.o [6]
+  .bss               zero     0x2000'7214          4     0x4  tasks.o [6]
+  .bss               zero     0x2000'7218          4     0x4  tasks.o [6]
+  .bss               zero     0x2000'721c          4     0x4  tasks.o [6]
+  .bss               zero     0x2000'7220          4     0x4  tasks.o [6]
+  .bss               zero     0x2000'7224          4     0x4  timers.o [6]
+  .bss               zero     0x2000'7228          4     0x4  timers.o [6]
+  .bss               zero     0x2000'722c          4     0x4  timers.o [6]
+  .bss               zero     0x2000'7230          4     0x4  timers.o [6]
+  .bss               zero     0x2000'7234          4     0x4  timers.o [6]
+  .bss               zero     0x2000'7238          4     0x4  xfail_s.o [10]
+  .bss               zero     0x2000'723c          2     0x2  modem_module.o [9]
+  .bss               zero     0x2000'723e          2     0x2  modem_module.o [9]
+  .bss               zero     0x2000'7240          2     0x2  modem_module.o [9]
+  .bss               zero     0x2000'7242          2     0x2  Sensor_module.o [1]
+  .bss               zero     0x2000'7244          2     0x2  Sensor_module.o [1]
+  .bss               zero     0x2000'7246                0x1  cloud_module.o [1]
+  .bss               zero     0x2000'7247                0x1  cloud_module.o [1]
+  .bss               zero     0x2000'7248                0x1  cloud_module.o [1]
+  .bss               zero     0x2000'7249                0x1  cloud_module.o [1]
+  .bss               zero     0x2000'724a                0x1  cloud_module.o [1]
+  .bss               zero     0x2000'724b                0x1  main.o [4]
+  .bss               zero     0x2000'724c                0x1  main.o [4]
+  .bss               zero     0x2000'724d                0x1  metro_hif.o [1]
+  .bss               zero     0x2000'724e                0x1  metrology_module.o [1]
+  .bss               zero     0x2000'724f                0x1  metrology_module.o [1]
+  .bss               zero     0x2000'7250                0x1  metrology_module.o [1]
+  .bss               zero     0x2000'7251                0x1  modem_globals.o [9]
+  .bss               zero     0x2000'7252                0x1  modem_globals.o [9]
+  .bss               zero     0x2000'7253                0x1  modem_main.o [9]
+  .bss               zero     0x2000'7254                0x1  modem_main.o [9]
+  .bss               zero     0x2000'7255                0x1  modem_module.o [9]
+  .bss               zero     0x2000'7256                0x1  Sensor_module.o [1]
+  .bss               zero     0x2000'7257                0x1  Sensor_module.o [1]
+  .bss               zero     0x2000'7258                0x1  Sensor_module.o [1]
+  .bss               zero     0x2000'7259                0x1  Sensor_module.o [1]
+  .bss               zero     0x2000'725a                0x1  Sensor_module.o [1]
+  .bss               zero     0x2000'725b                0x1  Sensor_module.o [1]
+                            - 0x2000'725c             0x71e4
+
+"P2", part 3 of 3:                                     0x800
+  CSTACK                      0x2000'7260          8   0x800  <Block>
+    CSTACK           uninit   0x2000'7260              0x800  <Block tail>
+                            - 0x2000'7a60              0x800
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+   0x800'cf14   0x801'ffff  0x1'30ec
+  0x2000'0076  0x2000'0077       0x2
+  0x2000'725c  0x2000'725f       0x4
+  0x2000'7a60  0x2000'8fff    0x15a0
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x71e4:
+          0x2000'0078  0x71e4
+
+Copy/packbits (__iar_packbits_init_single3)
+    1 source range, total size 0x65 (85% of destination):
+           0x800'ceaf    0x65
+    1 destination range, total size 0x76:
+          0x2000'0000    0x76
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                        ro code  ro data  rw data
+    ------                        -------  -------  -------
+command line/config:
+    -------------------------------------------------------
+    Total:
+
+C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\Apps_139222153124407364.dir: [1]
+    Sensor_module.o                   980               134
+    cloud_module.o                  1'104       31      143
+    crc.o                              56      512
+    m2m_modem.o                       104
+    metro_hif.o                     1'192      300      685
+    metrology_module.o                704                71
+    -------------------------------------------------------
+    Total:                          4'140      843    1'033
+
+C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\BSP_16987466797925798938.dir: [2]
+    lis2dux12_reg.o                 3'286
+    stm32_st87m01.o                   496                92
+    -------------------------------------------------------
+    Total:                          3'782                92
+
+C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\CMSIS_6603591812247902717.dir: [3]
+    system_stm32g0xx.o                  2       99        4
+    -------------------------------------------------------
+    Total:                              2       99        4
+
+C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\Core_13247989168731456611.dir: [4]
+    main.o                          1'870      428      738
+    stm32g0xx_hal_msp.o               704
+    stm32g0xx_hal_timebase_tim.o      196                76
+    stm32g0xx_it.o                    244
+    -------------------------------------------------------
+    Total:                          3'014      428      814
+
+C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\EWARM_18443280873093131863.dir: [5]
+    startup_stm32g071xx.o             246
+    -------------------------------------------------------
+    Total:                            246
+
+C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\FreeRTOS_4809373609813369194.dir: [6]
+    cmsis_os2.o                     1'104             1'724
+    heap_4.o                          564        4   12'032
+    list.o                            156
+    port.o                            264        3        4
+    portasm.o                         124
+    queue.o                         1'840                64
+    tasks.o                         2'272        8    1'280
+    timers.o                        1'096       16      300
+    -------------------------------------------------------
+    Total:                          7'420       31   15'404
+
+C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\Libs_3913195376021097889.dir: [7]
+    -------------------------------------------------------
+    Total:
+
+C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir: [8]
+    stm32g0xx_hal.o                   148        5        9
+    stm32g0xx_hal_cortex.o            260
+    stm32g0xx_hal_dma.o             1'228
+    stm32g0xx_hal_gpio.o              916
+    stm32g0xx_hal_i2c.o             2'112
+    stm32g0xx_hal_i2c_ex.o            208
+    stm32g0xx_hal_pwr_ex.o             88
+    stm32g0xx_hal_rcc.o             1'984
+    stm32g0xx_hal_rcc_ex.o            628
+    stm32g0xx_hal_tim.o             1'220
+    stm32g0xx_hal_tim_ex.o            146
+    stm32g0xx_hal_uart.o            5'266       24
+    stm32g0xx_hal_uart_ex.o           382       16
+    stm32g0xx_ll_exti.o               390
+    stm32g0xx_ll_gpio.o               308
+    -------------------------------------------------------
+    Total:                         15'284       45        9
+
+C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\m2m_modem_2353766246464904183.dir: [9]
+    modem_event_buffer.o              364             1'000
+    modem_globals.o                                   6'529
+    modem_interface.o               1'748      244        4
+    modem_main.o                      732      116       66
+    modem_module.o                  6'168      564    3'051
+    modem_ring_buffer.o               288             1'200
+    -------------------------------------------------------
+    Total:                          9'300      924   11'850
+
+dl6M_tlf.a: [10]
+    XShttio.o                           8        7        8
+    abort.o                            10
+    exit.o                              8
+    low_level_init.o                    4
+    sprintf.o                          64
+    strstr.o                           46
+    xfail_s.o                          72                 4
+    xlocale_c.o                        12       51       56
+    xprintffull_nomb.o              3'974      106
+    xsprout.o                          10
+    -------------------------------------------------------
+    Total:                          4'208      164       68
+
+m6M_tl.a: [11]
+    DblAddSub.o                       424
+    DblCmpGe.o                         50
+    DblCmpLe.o                         50
+    DblDiv.o                          194
+    DblMul.o                          388
+    DblToI32.o                         82
+    FltAddSub.o                       288
+    FltDiv.o                          164
+    FltMul.o                          176
+    IxxToDbl.o                         52
+    IxxToFlt.o                         54
+    frexp.o                            42
+    ldexp.o                           112
+    -------------------------------------------------------
+    Total:                          2'076
+
+rt6M_tl.a: [12]
+    ABImemcpy.o                        78
+    ABImemset.o                        78
+    I32DivModFast.o                   224
+    I64DivMod.o                       124
+    I64DivZer.o                         2
+    I64Mul.o                           50
+    IntDivZer.o                         2
+    cexit.o                             4
+    cexit_2.o                          10
+    cmain.o                            34
+    cstartup_M.o                       28
+    data_init.o                        40
+    memchr.o                           22
+    packbits_init_single.o             62
+    strchr.o                           18
+    strlen.o                           14
+    uwrite4.o                          20
+    zero_init3.o                       60
+    -------------------------------------------------------
+    Total:                            870
+
+shb_l.a: [13]
+    ABIassert.o                        36
+    exit.o                             20
+    iarttio.o                          44
+    -------------------------------------------------------
+    Total:                            100
+
+    Gaps                                         4
+    Linker created                              32    2'048
+-----------------------------------------------------------
+    Grand Total:                   50'442    2'570   31'322
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address    Size  Type      Object
+-----                       -------    ----  ----      ------
+.iar.init_table$$Base    0x800'ca08           --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'ca28           --   Gb  - Linker created -
+?main                    0x800'c9c9          Code  Gb  cmain.o [12]
+ADC1_COMP_IRQHandler     0x800'9d6f          Code  Wk  startup_stm32g071xx.o [5]
+AHBPrescTable            0x800'c7f8    0x40  Data  Gb  system_stm32g0xx.o [3]
+APBPrescTable            0x800'ca4c    0x20  Data  Gb  system_stm32g0xx.o [3]
+Buffer_to_float          0x800'7295    0x1a  Code  Gb  metrology_module.o [1]
+CEC_IRQHandler           0x800'ceab          Code  Wk  startup_stm32g071xx.o [5]
+CSTACK$$Base            0x2000'7260           --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'7a60           --   Gb  - Linker created -
+Check_Socket_Status      0x800'46cd    0x14  Code  Gb  modem_main.o [9]
+Close_UDP_Server_Socket
+                         0x800'4711    0x10  Code  Gb  modem_main.o [9]
+CloudTaskHandle         0x2000'7160     0x4  Data  Gb  main.o [4]
+CloudTask_attributes     0x800'c914    0x24  Data  Gb  main.o [4]
+Create_Server_Socket     0x800'4699    0x1e  Code  Gb  modem_main.o [9]
+Create_Tcp_Connection    0x800'46b7    0x16  Code  Gb  modem_main.o [9]
+DMA1_Ch4_7_DMAMUX1_OVR_IRQHandler
+                         0x800'c563     0xa  Code  Gb  stm32g0xx_it.o [4]
+DMA1_Channel1_IRQHandler
+                         0x800'09c9     0xc  Code  Gb  modem_module.o [9]
+DMA1_Channel2_3_IRQHandler
+                         0x800'8c53          Code  Wk  startup_stm32g071xx.o [5]
+DMA_CalcDMAMUXChannelBaseAndMask
+                         0x800'533d    0x30  Code  Lc  stm32g0xx_hal_dma.o [8]
+DMA_CalcDMAMUXRequestGenBaseAndMask
+                         0x800'536d    0x24  Code  Lc  stm32g0xx_hal_dma.o [8]
+DMA_SetConfig            0x800'52ed    0x4a  Code  Lc  stm32g0xx_hal_dma.o [8]
+EXTI0_1_IRQHandler       0x800'7c0b          Code  Wk  startup_stm32g071xx.o [5]
+EXTI2_3_IRQHandler       0x800'7cbb          Code  Wk  startup_stm32g071xx.o [5]
+EXTI4_15_IRQHandler      0x800'c5f1    0x1a  Code  Gb  stm32g0xx_it.o [4]
+Error_Handler            0x800'27f1     0x6  Code  Gb  main.o [4]
+FLASH_IRQHandler         0x800'567f          Code  Wk  startup_stm32g071xx.o [5]
+HAL_DMA_Abort            0x800'50c9    0x86  Code  Gb  stm32g0xx_hal_dma.o [8]
+HAL_DMA_Abort_IT         0x800'5155    0x8e  Code  Gb  stm32g0xx_hal_dma.o [8]
+HAL_DMA_DeInit           0x800'4f85    0x8c  Code  Gb  stm32g0xx_hal_dma.o [8]
+HAL_DMA_IRQHandler       0x800'51f1    0xf6  Code  Gb  stm32g0xx_hal_dma.o [8]
+HAL_DMA_Init             0x800'4ed5    0xb0  Code  Gb  stm32g0xx_hal_dma.o [8]
+HAL_DMA_Start_IT         0x800'5011    0xb8  Code  Gb  stm32g0xx_hal_dma.o [8]
+HAL_Delay                0x800'56c5    0x2c  Code  Wk  stm32g0xx_hal.o [8]
+HAL_GPIO_DeInit          0x800'4d2b   0x13c  Code  Gb  stm32g0xx_hal_gpio.o [8]
+HAL_GPIO_Init            0x800'4b41   0x1ea  Code  Gb  stm32g0xx_hal_gpio.o [8]
+HAL_GPIO_ReadPin         0x800'4e67    0x1a  Code  Gb  stm32g0xx_hal_gpio.o [8]
+HAL_GPIO_TogglePin       0x800'4e9b    0x1a  Code  Gb  stm32g0xx_hal_gpio.o [8]
+HAL_GPIO_WritePin        0x800'4e81    0x1a  Code  Gb  stm32g0xx_hal_gpio.o [8]
+HAL_GetTick              0x800'7cbd     0xc  Code  Wk  stm32g0xx_hal.o [8]
+HAL_I2CEx_ConfigAnalogFilter
+                         0x800'6749    0x66  Code  Gb  stm32g0xx_hal_i2c_ex.o [8]
+HAL_I2CEx_ConfigDigitalFilter
+                         0x800'67af    0x60  Code  Gb  stm32g0xx_hal_i2c_ex.o [8]
+HAL_I2C_Init             0x800'5f09    0xda  Code  Gb  stm32g0xx_hal_i2c.o [8]
+HAL_I2C_Mem_Read         0x800'6199   0x1a8  Code  Gb  stm32g0xx_hal_i2c.o [8]
+HAL_I2C_Mem_Write        0x800'5ff5   0x1a4  Code  Gb  stm32g0xx_hal_i2c.o [8]
+HAL_I2C_MspInit          0x800'797f    0x60  Code  Gb  stm32g0xx_hal_msp.o [4]
+HAL_IncTick              0x800'7929    0x18  Code  Wk  stm32g0xx_hal.o [8]
+HAL_Init                 0x800'5681    0x2a  Code  Gb  stm32g0xx_hal.o [8]
+HAL_InitTick             0x800'9fe5    0xaa  Code  Gb  stm32g0xx_hal_timebase_tim.o [4]
+HAL_MspInit              0x800'7941    0x3e  Code  Gb  stm32g0xx_hal_msp.o [4]
+HAL_NVIC_DisableIRQ      0x800'6b03     0xe  Code  Gb  stm32g0xx_hal_cortex.o [8]
+HAL_NVIC_EnableIRQ       0x800'6af5     0xe  Code  Gb  stm32g0xx_hal_cortex.o [8]
+HAL_NVIC_SetPriority     0x800'6ae1    0x14  Code  Gb  stm32g0xx_hal_cortex.o [8]
+HAL_PWREx_ControlVoltageScaling
+                         0x800'56f1    0x42  Code  Gb  stm32g0xx_hal_pwr_ex.o [8]
+HAL_RCCEx_PeriphCLKConfig
+                         0x800'9d71   0x232  Code  Gb  stm32g0xx_hal_rcc_ex.o [8]
+HAL_RCC_ClockConfig      0x800'5c2d   0x17c  Code  Gb  stm32g0xx_hal_rcc.o [8]
+HAL_RCC_GetClockConfig   0x800'5eb1    0x2e  Code  Gb  stm32g0xx_hal_rcc.o [8]
+HAL_RCC_GetHCLKFreq      0x800'5e6d     0x6  Code  Gb  stm32g0xx_hal_rcc.o [8]
+HAL_RCC_GetPCLK1Freq     0x800'5e79    0x20  Code  Gb  stm32g0xx_hal_rcc.o [8]
+HAL_RCC_GetSysClockFreq
+                         0x800'5db9    0xb4  Code  Gb  stm32g0xx_hal_rcc.o [8]
+HAL_RCC_OscConfig        0x800'5759   0x4b2  Code  Gb  stm32g0xx_hal_rcc.o [8]
+HAL_SYSCFG_StrobeDBattpinsConfig
+                         0x800'56ab     0xe  Code  Gb  stm32g0xx_hal.o [8]
+HAL_TIMEx_Break2Callback
+                         0x800'5679     0x2  Code  Wk  stm32g0xx_hal_tim_ex.o [8]
+HAL_TIMEx_BreakCallback
+                         0x800'5677     0x2  Code  Wk  stm32g0xx_hal_tim_ex.o [8]
+HAL_TIMEx_CommutCallback
+                         0x800'567d     0x2  Code  Wk  stm32g0xx_hal_tim_ex.o [8]
+HAL_TIMEx_MasterConfigSynchronization
+                         0x800'6819    0x7c  Code  Gb  stm32g0xx_hal_tim_ex.o [8]
+HAL_TIM_Base_Init        0x800'1bed    0x64  Code  Gb  stm32g0xx_hal_tim.o [8]
+HAL_TIM_Base_MspInit     0x800'5569    0xae  Code  Gb  stm32_st87m01.o [2]
+HAL_TIM_Base_Start_IT    0x800'1c51    0x74  Code  Gb  stm32g0xx_hal_tim.o [8]
+HAL_TIM_ConfigClockSource
+                         0x800'1e69   0x100  Code  Gb  stm32g0xx_hal_tim.o [8]
+HAL_TIM_IC_CaptureCallback
+                         0x800'5671     0x2  Code  Wk  stm32g0xx_hal_tim.o [8]
+HAL_TIM_IRQHandler       0x800'1cd5   0x18c  Code  Gb  stm32g0xx_hal_tim.o [8]
+HAL_TIM_OC_DelayElapsedCallback
+                         0x800'5673     0x2  Code  Wk  stm32g0xx_hal_tim.o [8]
+HAL_TIM_PWM_PulseFinishedCallback
+                         0x800'5675     0x2  Code  Wk  stm32g0xx_hal_tim.o [8]
+HAL_TIM_PeriodElapsedCallback
+                         0x800'2787    0x36  Code  Gb  main.o [4]
+HAL_TIM_TriggerCallback
+                         0x800'567b     0x2  Code  Wk  stm32g0xx_hal_tim.o [8]
+HAL_UARTEx_DisableFifoMode
+                         0x800'68a5    0x46  Code  Gb  stm32g0xx_hal_uart_ex.o [8]
+HAL_UARTEx_RxEventCallback
+                         0x800'7c03     0x2  Code  Wk  stm32g0xx_hal_uart.o [8]
+HAL_UARTEx_RxFifoFullCallback
+                         0x800'7c09     0x2  Code  Wk  stm32g0xx_hal_uart_ex.o [8]
+HAL_UARTEx_SetRxFifoThreshold
+                         0x800'6941    0x56  Code  Gb  stm32g0xx_hal_uart_ex.o [8]
+HAL_UARTEx_SetTxFifoThreshold
+                         0x800'68eb    0x56  Code  Gb  stm32g0xx_hal_uart_ex.o [8]
+HAL_UARTEx_TxFifoEmptyCallback
+                         0x800'7c07     0x2  Code  Wk  stm32g0xx_hal_uart_ex.o [8]
+HAL_UARTEx_WakeupCallback
+                         0x800'7c05     0x2  Code  Wk  stm32g0xx_hal_uart_ex.o [8]
+HAL_UART_DeInit          0x800'2885    0x4a  Code  Gb  stm32g0xx_hal_uart.o [8]
+HAL_UART_ErrorCallback   0x800'7c01     0x2  Code  Wk  stm32g0xx_hal_uart.o [8]
+HAL_UART_IRQHandler      0x800'2a15   0x37c  Code  Gb  stm32g0xx_hal_uart.o [8]
+HAL_UART_Init            0x800'2801    0x7e  Code  Gb  stm32g0xx_hal_uart.o [8]
+HAL_UART_MspDeInit       0x800'7b5d    0x6e  Code  Gb  stm32g0xx_hal_msp.o [4]
+HAL_UART_MspInit         0x800'79df   0x178  Code  Gb  stm32g0xx_hal_msp.o [4]
+HAL_UART_Receive_IT      0x800'28cf    0x7c  Code  Gb  stm32g0xx_hal_uart.o [8]
+HAL_UART_RxCpltCallback
+                         0x800'562b    0x14  Code  Gb  stm32_st87m01.o [2]
+HAL_UART_Transmit_DMA    0x800'294b    0xba  Code  Gb  stm32g0xx_hal_uart.o [8]
+HAL_UART_TxCpltCallback
+                         0x800'5617    0x14  Code  Gb  stm32_st87m01.o [2]
+HAL_UART_TxHalfCpltCallback
+                         0x800'7cc9     0x2  Code  Wk  stm32g0xx_hal_uart.o [8]
+HardFault_Handler        0x800'c55f     0x4  Code  Gb  stm32g0xx_it.o [4]
+I2C1_IRQHandler          0x800'c70f          Code  Wk  startup_stm32g071xx.o [5]
+I2C2_IRQHandler          0x800'c9f7          Code  Wk  startup_stm32g071xx.o [5]
+I2C_Flush_TXDR           0x800'645d    0x28  Code  Lc  stm32g0xx_hal_i2c.o [8]
+I2C_IsErrorOccurred      0x800'65c9   0x142  Code  Lc  stm32g0xx_hal_i2c.o [8]
+I2C_RequestMemoryRead    0x800'63d3    0x84  Code  Lc  stm32g0xx_hal_i2c.o [8]
+I2C_RequestMemoryWrite   0x800'634d    0x86  Code  Lc  stm32g0xx_hal_i2c.o [8]
+I2C_TransferConfig       0x800'670b    0x36  Code  Lc  stm32g0xx_hal_i2c.o [8]
+I2C_WaitOnFlagUntilTimeout
+                         0x800'6485    0x82  Code  Lc  stm32g0xx_hal_i2c.o [8]
+I2C_WaitOnSTOPFlagUntilTimeout
+                         0x800'656d    0x5c  Code  Lc  stm32g0xx_hal_i2c.o [8]
+I2C_WaitOnTXISFlagUntilTimeout
+                         0x800'6507    0x66  Code  Lc  stm32g0xx_hal_i2c.o [8]
+IO_modem_status_flag    0x2000'6f88    0x24  Data  Gb  modem_globals.o [9]
+IsST87_Comm_ongoing     0x2000'7248     0x1  Data  Gb  cloud_module.o [1]
+IsSTPM32_Comm_ongoing   0x2000'724f     0x1  Data  Gb  metrology_module.o [1]
+KernelState             0x2000'7140     0x4  Data  Lc  cmsis_os2.o [6]
+LL_EXTI_ClearRisingFlag_0_31
+                         0x800'c555     0x6  Code  Lc  stm32g0xx_it.o [4]
+LL_EXTI_DisableEvent_0_31
+                         0x800'6b5d     0xa  Code  Lc  stm32g0xx_ll_exti.o [8]
+LL_EXTI_DisableEvent_32_63
+                         0x800'6b67     0xa  Code  Lc  stm32g0xx_ll_exti.o [8]
+LL_EXTI_DisableFallingTrig_0_31
+                         0x800'6b8f     0xa  Code  Lc  stm32g0xx_ll_exti.o [8]
+LL_EXTI_DisableIT_0_31   0x800'6b35     0xa  Code  Lc  stm32g0xx_ll_exti.o [8]
+LL_EXTI_DisableIT_32_63
+                         0x800'6b3f     0xa  Code  Lc  stm32g0xx_ll_exti.o [8]
+LL_EXTI_DisableRisingTrig_0_31
+                         0x800'6b7b     0xa  Code  Lc  stm32g0xx_ll_exti.o [8]
+LL_EXTI_EnableEvent_0_31
+                         0x800'6b49     0xa  Code  Lc  stm32g0xx_ll_exti.o [8]
+LL_EXTI_EnableEvent_32_63
+                         0x800'6b53     0xa  Code  Lc  stm32g0xx_ll_exti.o [8]
+LL_EXTI_EnableFallingTrig_0_31
+                         0x800'6b85     0xa  Code  Lc  stm32g0xx_ll_exti.o [8]
+LL_EXTI_EnableIT_0_31    0x800'6b21     0xa  Code  Lc  stm32g0xx_ll_exti.o [8]
+LL_EXTI_EnableIT_32_63   0x800'6b2b     0xa  Code  Lc  stm32g0xx_ll_exti.o [8]
+LL_EXTI_EnableRisingTrig_0_31
+                         0x800'6b71     0xa  Code  Lc  stm32g0xx_ll_exti.o [8]
+LL_EXTI_Init             0x800'6bb1    0xf6  Code  Gb  stm32g0xx_ll_exti.o [8]
+LL_EXTI_IsActiveRisingFlag_0_31
+                         0x800'c541    0x14  Code  Lc  stm32g0xx_it.o [4]
+LL_EXTI_SetEXTISource    0x800'20e5    0x30  Code  Lc  main.o [4]
+LL_GPIO_Init             0x800'6d63    0x7a  Code  Gb  stm32g0xx_ll_gpio.o [8]
+LL_GPIO_ResetOutputPin   0x800'20e1     0x4  Code  Lc  main.o [4]
+LL_GPIO_SetAFPin_0_7     0x800'6d0f    0x24  Code  Lc  stm32g0xx_ll_gpio.o [8]
+LL_GPIO_SetAFPin_8_15    0x800'6d33    0x30  Code  Lc  stm32g0xx_ll_gpio.o [8]
+LL_GPIO_SetPinMode       0x800'20a9    0x1c  Code  Lc  main.o [4]
+LL_GPIO_SetPinMode       0x800'6ca9    0x1c  Code  Lc  stm32g0xx_ll_gpio.o [8]
+LL_GPIO_SetPinOutputType
+                         0x800'6cc5    0x12  Code  Lc  stm32g0xx_ll_gpio.o [8]
+LL_GPIO_SetPinPull       0x800'20c5    0x1c  Code  Lc  main.o [4]
+LL_GPIO_SetPinPull       0x800'6cf3    0x1c  Code  Lc  stm32g0xx_ll_gpio.o [8]
+LL_GPIO_SetPinSpeed      0x800'6cd7    0x1c  Code  Lc  stm32g0xx_ll_gpio.o [8]
+LL_IOP_GRP1_EnableClock
+                         0x800'2115    0x16  Code  Lc  main.o [4]
+LL_RCC_GetAPB1Prescaler
+                         0x800'5749     0xc  Code  Lc  stm32g0xx_hal_rcc.o [8]
+LedStatusQueueCloudHandle
+                        0x2000'7180     0x4  Data  Gb  main.o [4]
+LedStatusQueueCloud_attributes
+                         0x800'cb54    0x18  Data  Gb  main.o [4]
+LedStatusQueueHandle    0x2000'7174     0x4  Data  Gb  main.o [4]
+LedStatusQueue_attributes
+                         0x800'cb0c    0x18  Data  Gb  main.o [4]
+Load_Data               0x2000'6ff0    0x14  Data  Gb  metrology_module.o [1]
+Load_Sensor_data        0x2000'70cc    0x10  Data  Gb  cloud_module.o [1]
+Load_metrology_data     0x2000'6fdc    0x14  Data  Gb  cloud_module.o [1]
+MX_DMA_Init              0x800'25e9    0x26  Code  Lc  main.o [4]
+MX_GPIO_Init             0x800'2635   0x10a  Code  Lc  main.o [4]
+MX_I2C2_Init             0x800'23cb    0x4e  Code  Lc  main.o [4]
+MX_TIM1_Init             0x800'2421    0x70  Code  Gb  main.o [4]
+MX_USART1_UART_Init      0x800'2499    0x6a  Code  Lc  main.o [4]
+MX_USART2_UART_Init      0x800'2521    0x6a  Code  Lc  main.o [4]
+MX_USART4_UART_Init      0x800'25a5    0x32  Code  Lc  main.o [4]
+MetroCommStatusHandle   0x2000'7178     0x4  Data  Gb  main.o [4]
+MetroCommStatus_attributes
+                         0x800'cb24    0x18  Data  Gb  main.o [4]
+MetroQueueHandle        0x2000'716c     0x4  Data  Gb  main.o [4]
+MetroQueue_attributes    0x800'cadc    0x18  Data  Gb  main.o [4]
+MetroTaskHandle         0x2000'7164     0x4  Data  Gb  main.o [4]
+MetroTask_attributes     0x800'c938    0x24  Data  Gb  main.o [4]
+Metro_State             0x2000'724e     0x1  Data  Gb  metrology_module.o [1]
+Metrology_controler      0x800'72b9   0x244  Code  Gb  metrology_module.o [1]
+Metrology_controller_init
+                         0x800'72af     0xa  Code  Gb  metrology_module.o [1]
+Modem_AT_Cmd_Buff       0x2000'3b10   0x6d8  Data  Gb  modem_globals.o [9]
+Modem_Clear_Sckt_Closed_Status
+                         0x800'174f     0x8  Code  Gb  modem_module.o [9]
+Modem_Client_Check_Socket_Status
+                         0x800'1705    0x3a  Code  Gb  modem_module.o [9]
+Modem_Control_Variables
+                        0x2000'6fc4    0x17  Data  Gb  modem_globals.o [9]
+Modem_Counter_Variables
+                        0x2000'6a08    0x78  Data  Gb  modem_globals.o [9]
+Modem_Get_Sckt_Closed_Status
+                         0x800'1749     0x6  Code  Gb  modem_module.o [9]
+Modem_HAL_UART_RxCpltCallback
+                         0x800'0969    0x5c  Code  Gb  modem_module.o [9]
+Modem_HAL_UART_TxCpltCallback
+                         0x800'0955     0x8  Code  Gb  modem_module.o [9]
+Modem_Module_Init        0x800'0141    0x72  Code  Gb  modem_module.o [9]
+Modem_Module_and_Timer_Init
+                         0x800'00bd    0x84  Code  Gb  modem_module.o [9]
+Modem_Queue_Client_Close_Event
+                         0x800'175d    0x3c  Code  Gb  modem_module.o [9]
+Modem_Queue_Client_Open_Event
+                         0x800'169d    0x4c  Code  Gb  modem_module.o [9]
+Modem_Queue_Client_Write_Event
+                         0x800'1659    0x3e  Code  Gb  modem_module.o [9]
+Modem_Receive_AT_Resp    0x800'09d9    0x32  Code  Gb  modem_module.o [9]
+Modem_Receive_Data       0x800'0287    0x22  Code  Gb  modem_module.o [9]
+Modem_Reset_AT_CMD_Buffer
+                         0x800'17bd    0x14  Code  Gb  modem_module.o [9]
+Modem_Resume_Dequeue     0x800'08dd     0x8  Code  Gb  modem_module.o [9]
+Modem_Socket_Pending_Data
+                         0x800'43e1    0x36  Code  Gb  modem_interface.o [9]
+Modem_Socket_Read        0x800'4319    0x46  Code  Gb  modem_interface.o [9]
+Modem_Start_Timer        0x800'08bd     0xc  Code  Gb  modem_module.o [9]
+Modem_Stop_Timer         0x800'08c9    0x10  Code  Gb  modem_module.o [9]
+Modem_SysTick_Isr        0x800'08f5    0x5c  Code  Gb  modem_module.o [9]
+Modem_TIM_Handler        0x800'02d9   0x5de  Code  Gb  modem_module.o [9]
+Modem_Tcp_Connection_Event
+                         0x800'17d9    0x48  Code  Gb  modem_module.o [9]
+Modem_Timer_Config       0x800'5481    0x30  Code  Gb  stm32_st87m01.o [2]
+Modem_Transmit_AT_Cmd    0x800'1821    0x86  Code  Gb  modem_module.o [9]
+Modem_UART_Configuration
+                         0x800'54b1    0x9a  Code  Gb  stm32_st87m01.o [2]
+Modem_UART_Configuration::hdma_tx
+                        0x2000'6b94    0x5c  Data  Lc  stm32_st87m01.o [2]
+Modem_Wait_For_Sock_Read_To_Complete
+                         0x800'179d    0x1c  Code  Gb  modem_module.o [9]
+NMI_Handler              0x800'c55b     0x4  Code  Gb  stm32g0xx_it.o [4]
+PVD_IRQHandler           0x800'3d1f          Code  Wk  startup_stm32g071xx.o [5]
+PendSV_Handler           0x800'c0f7          Code  Gb  portasm.o [6]
+Process_Modem            0x800'0a15    0x1e  Code  Gb  modem_module.o [9]
+Process_Modem_Buffer     0x800'0a75   0xbda  Code  Gb  modem_module.o [9]
+Process_Modem_Buffer::Fillptr
+                        0x2000'71cc     0x4  Data  Lc  modem_module.o [9]
+Process_Modem_Buffer::databytes_No
+                        0x2000'7118     0x8  Data  Lc  modem_module.o [9]
+Process_Modem_Buffer::pStr
+                        0x2000'71d4     0x4  Data  Lc  modem_module.o [9]
+Process_Modem_Buffer::process_buffer
+                        0x2000'4d70   0x4b0  Data  Lc  modem_module.o [9]
+Process_Modem_Buffer::ptr_offset
+                        0x2000'71d0     0x4  Data  Lc  modem_module.o [9]
+Protocol                0x2000'7138     0x4  Data  Gb  cloud_module.o [1]
+RCC_IRQHandler           0x800'6ca7          Code  Wk  startup_stm32g071xx.o [5]
+RTC_TAMP_IRQHandler      0x800'3d6f          Code  Wk  startup_stm32g071xx.o [5]
+Region$$Table$$Base      0x800'ca08           --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'ca28           --   Gb  - Linker created -
+Reset_Handler            0x800'cced          Code  Wk  startup_stm32g071xx.o [5]
+SPI1_IRQHandler          0x800'ca29          Code  Wk  startup_stm32g071xx.o [5]
+SPI2_IRQHandler          0x800'cea9          Code  Wk  startup_stm32g071xx.o [5]
+SPY_AT_Buff             0x2000'41e8   0x6d8  Data  Gb  modem_module.o [9]
+ST87CommStatusHandle    0x2000'717c     0x4  Data  Gb  main.o [4]
+ST87CommStatus_attributes
+                         0x800'cb3c    0x18  Data  Gb  main.o [4]
+ST87_Comm_ongoing       0x2000'7250     0x1  Data  Gb  metrology_module.o [1]
+STPM32_Comm_ongoing     0x2000'7249     0x1  Data  Gb  cloud_module.o [1]
+SVC_Handler              0x800'c135          Code  Gb  portasm.o [6]
+SVC_Setup                0x800'47c1     0xe  Code  Lc  cmsis_os2.o [6]
+SensorQueueHandle       0x2000'7170     0x4  Data  Gb  main.o [4]
+SensorQueue_attributes   0x800'caf4    0x18  Data  Gb  main.o [4]
+SensorTaskHandle        0x2000'7168     0x4  Data  Gb  main.o [4]
+SensorTask_attributes    0x800'c95c    0x24  Data  Gb  main.o [4]
+Sensor_Controller        0x800'78a5    0x22  Code  Gb  Sensor_module.o [1]
+Sensor_Init              0x800'7635   0x1a4  Code  Gb  Sensor_module.o [1]
+Sensor_Interrupt         0x800'77e1    0xbe  Code  Gb  Sensor_module.o [1]
+Sensor_data             0x2000'70ec    0x10  Data  Gb  Sensor_module.o [1]
+Set_Modem_Control_Variables
+                         0x800'01b3    0xb8  Code  Gb  modem_module.o [9]
+Set_Modem_Counter_Variables
+                         0x800'026b    0x1c  Code  Gb  modem_module.o [9]
+SocketID                0x2000'7246     0x1  Data  Lc  cloud_module.o [1]
+StartCloudTask           0x800'275d     0xe  Code  Gb  main.o [4]
+StartDefaultTask         0x800'2751     0xc  Code  Gb  main.o [4]
+StartMetroTask           0x800'276b     0xe  Code  Gb  main.o [4]
+StartSensorTask          0x800'2779     0xe  Code  Gb  main.o [4]
+SysTick_Handler          0x800'47ad    0x14  Code  Gb  cmsis_os2.o [6]
+SystemClock_Config       0x800'234d    0x7e  Code  Gb  main.o [4]
+SystemCoreClock         0x2000'0030     0x4  Data  Gb  system_stm32g0xx.o [3]
+SystemInit               0x800'cead     0x2  Code  Gb  system_stm32g0xx.o [3]
+TCP_Server_send          0x800'46f9    0x18  Code  Gb  modem_main.o [9]
+TIM14_IRQHandler         0x800'b9b3          Code  Wk  startup_stm32g071xx.o [5]
+TIM15_IRQHandler         0x800'5555     0xa  Code  Gb  stm32_st87m01.o [2]
+TIM16_IRQHandler         0x800'555f     0xa  Code  Gb  stm32_st87m01.o [2]
+TIM17_IRQHandler         0x800'c2df          Code  Wk  startup_stm32g071xx.o [5]
+TIM1_BRK_UP_TRG_COM_IRQHandler
+                         0x800'c56d    0x1c  Code  Gb  stm32g0xx_it.o [4]
+TIM1_CC_IRQHandler       0x800'b2ff          Code  Wk  startup_stm32g071xx.o [5]
+TIM2_IRQHandler          0x800'b3db          Code  Wk  startup_stm32g071xx.o [5]
+TIM3_IRQHandler          0x800'b3df          Code  Wk  startup_stm32g071xx.o [5]
+TIM6_DAC_LPTIM1_IRQHandler
+                         0x800'c589     0xa  Code  Gb  stm32g0xx_it.o [4]
+TIM7_LPTIM2_IRQHandler   0x800'b58f          Code  Wk  startup_stm32g071xx.o [5]
+TIM_Base_SetConfig       0x800'1f71    0x96  Code  Gb  stm32g0xx_hal_tim.o [8]
+TIM_ETR_SetConfig        0x800'2083    0x16  Code  Gb  stm32g0xx_hal_tim.o [8]
+TIM_ITRx_SetConfig       0x800'2071    0x10  Code  Lc  stm32g0xx_hal_tim.o [8]
+TIM_TI1_ConfigInputStage
+                         0x800'2025    0x24  Code  Lc  stm32g0xx_hal_tim.o [8]
+TIM_TI2_ConfigInputStage
+                         0x800'2049    0x26  Code  Lc  stm32g0xx_hal_tim.o [8]
+Temperature_avg          0x800'75f7    0x3e  Code  Gb  Sensor_module.o [1]
+TimeSocketClosed        0x2000'7253     0x1  Data  Lc  modem_main.o [9]
+UARTEx_SetNbDataToProcess
+                         0x800'69a1    0x72  Code  Lc  stm32g0xx_hal_uart_ex.o [8]
+UARTEx_SetNbDataToProcess::denominator
+                         0x800'ce84     0x8  Data  Lc  stm32g0xx_hal_uart_ex.o [8]
+UARTEx_SetNbDataToProcess::numerator
+                         0x800'ce7c     0x8  Data  Lc  stm32g0xx_hal_uart_ex.o [8]
+UARTPrescTable           0x800'cbb4    0x18  Data  Gb  stm32g0xx_hal_uart.o [8]
+UART_AdvFeatureConfig    0x800'30f9    0xde  Code  Gb  stm32g0xx_hal_uart.o [8]
+UART_CheckIdleState      0x800'31e1    0xcc  Code  Gb  stm32g0xx_hal_uart.o [8]
+UART_DMAAbortOnError     0x800'3647    0x18  Code  Lc  stm32g0xx_hal_uart.o [8]
+UART_DMAError            0x800'35f5    0x52  Code  Lc  stm32g0xx_hal_uart.o [8]
+UART_DMATransmitCplt     0x800'3579    0x52  Code  Lc  stm32g0xx_hal_uart.o [8]
+UART_DMATxHalfCplt       0x800'35cb     0xe  Code  Lc  stm32g0xx_hal_uart.o [8]
+UART_EndRxTransfer       0x800'3511    0x64  Code  Lc  stm32g0xx_hal_uart.o [8]
+UART_EndTransmit_IT      0x800'365f    0x30  Code  Lc  stm32g0xx_hal_uart.o [8]
+UART_EndTxTransfer       0x800'34d5    0x3c  Code  Lc  stm32g0xx_hal_uart.o [8]
+UART_RxISR_16BIT         0x800'3785    0xf6  Code  Lc  stm32g0xx_hal_uart.o [8]
+UART_RxISR_16BIT_FIFOEN
+                         0x800'3a79   0x1f8  Code  Lc  stm32g0xx_hal_uart.o [8]
+UART_RxISR_8BIT          0x800'368f    0xf6  Code  Lc  stm32g0xx_hal_uart.o [8]
+UART_RxISR_8BIT_FIFOEN   0x800'3885   0x1f0  Code  Lc  stm32g0xx_hal_uart.o [8]
+UART_SetConfig           0x800'2da1   0x348  Code  Gb  stm32g0xx_hal_uart.o [8]
+UART_Start_Receive_IT    0x800'336d   0x15c  Code  Gb  stm32g0xx_hal_uart.o [8]
+UART_WaitOnFlagUntilTimeout
+                         0x800'32d1    0x9c  Code  Gb  stm32g0xx_hal_uart.o [8]
+UCPD1_2_IRQHandler       0x800'7ccb          Code  Wk  startup_stm32g071xx.o [5]
+UDP_Server_send          0x800'46e1    0x18  Code  Gb  modem_main.o [9]
+USART1_IRQHandler        0x800'554b     0xa  Code  Gb  stm32_st87m01.o [2]
+USART2_IRQHandler        0x800'c593    0x54  Code  Gb  stm32g0xx_it.o [4]
+USART3_4_LPUART1_IRQHandler
+                         0x800'c5e7     0xa  Code  Gb  stm32g0xx_it.o [4]
+UartModemHandle         0x2000'6974    0x94  Data  Gb  modem_globals.o [9]
+WWDG_IRQHandler          0x800'3ccb          Code  Wk  startup_stm32g071xx.o [5]
+_LC                      0x800'7ccd     0x8  Code  Lc  xprintffull_nomb.o [10]
+_LitobFullNoMb           0x800'8aad   0x124  Code  Lc  xprintffull_nomb.o [10]
+_Locale_lconv           0x2000'0034    0x38  Data  Lc  xlocale_c.o [10]
+_PrintfFullNoMb          0x800'7cd5   0xdd8  Code  Gb  xprintffull_nomb.o [10]
+_PutcharsFullNoMb        0x800'8c1d    0x36  Code  Lc  xprintffull_nomb.o [10]
+_SProut                  0x800'27f7     0xa  Code  Gb  xsprout.o [10]
+__ICFEDIT_region_RAM_end__ {Abs}
+                        0x2000'8fff           --   Gb  <internal module>
+__ICFEDIT_region_RAM_start__ {Abs}
+                        0x2000'0000           --   Gb  <internal module>
+__NVIC_DisableIRQ        0x800'6a35    0x20  Code  Lc  stm32g0xx_hal_cortex.o [8]
+__NVIC_EnableIRQ         0x800'7555    0x18  Code  Lc  Sensor_module.o [1]
+__NVIC_EnableIRQ         0x800'6a1d    0x18  Code  Lc  stm32g0xx_hal_cortex.o [8]
+__NVIC_SetPriority       0x800'4721    0x8c  Code  Lc  cmsis_os2.o [6]
+__NVIC_SetPriority       0x800'6a55    0x8c  Code  Lc  stm32g0xx_hal_cortex.o [8]
+__aeabi_assert           0x800'c1b9    0x24  Code  Gb  ABIassert.o [13]
+__aeabi_cdcmple          0x800'b469          Code  Gb  DblCmpLe.o [11]
+__aeabi_cdrcmple         0x800'b49b          Code  Gb  DblCmpGe.o [11]
+__aeabi_d2iz             0x800'b53d          Code  Gb  DblToI32.o [11]
+__aeabi_d2uiz            0x800'b561          Code  Gb  DblToI32.o [11]
+__aeabi_ddiv             0x800'b76d          Code  Gb  DblDiv.o [11]
+__aeabi_dmul             0x800'b82f          Code  Gb  DblMul.o [11]
+__aeabi_dsub             0x800'b67f          Code  Gb  DblAddSub.o [11]
+__aeabi_fadd             0x800'b1df          Code  Gb  FltAddSub.o [11]
+__aeabi_fdiv             0x800'b337          Code  Gb  FltDiv.o [11]
+__aeabi_fmul             0x800'c1dd          Code  Gb  FltMul.o [11]
+__aeabi_fsub             0x800'b24f          Code  Gb  FltAddSub.o [11]
+__aeabi_i2d              0x800'b5b1          Code  Gb  IxxToDbl.o [11]
+__aeabi_i2f              0x800'b321          Code  Gb  IxxToFlt.o [11]
+__aeabi_idiv             0x800'53cd          Code  Gb  I32DivModFast.o [12]
+__aeabi_idiv0            0x800'9d6d          Code  Gb  IntDivZer.o [12]
+__aeabi_idivmod          0x800'53cd          Code  Gb  I32DivModFast.o [12]
+__aeabi_ldiv0            0x800'b3dd          Code  Gb  I64DivZer.o [12]
+__aeabi_lmul             0x800'7c0d          Code  Gb  I64Mul.o [12]
+__aeabi_memcpy           0x800'3d55          Code  Gb  ABImemcpy.o [12]
+__aeabi_memcpy4          0x800'3d21          Code  Gb  ABImemcpy.o [12]
+__aeabi_memcpy8          0x800'3d21          Code  Gb  ABImemcpy.o [12]
+__aeabi_memset           0x800'18d5          Code  Gb  ABImemset.o [12]
+__aeabi_ui2d             0x800'b591          Code  Gb  IxxToDbl.o [11]
+__aeabi_ui2f             0x800'b301          Code  Gb  IxxToFlt.o [11]
+__aeabi_uidiv            0x800'53d3          Code  Gb  I32DivModFast.o [12]
+__aeabi_uidivmod         0x800'53d3          Code  Gb  I32DivModFast.o [12]
+__aeabi_uldivmod         0x800'7c3f          Code  Gb  I64DivMod.o [12]
+__aeabi_uwrite4          0x800'c16d          Code  Gb  uwrite4.o [12]
+__cmain                  0x800'c9c9          Code  Gb  cmain.o [12]
+__exit                   0x800'c2f9    0x14  Code  Gb  exit.o [13]
+__iar_Fail_s             0x800'b3e1    0x22  Code  Gb  xfail_s.o [10]
+__iar_Memchr             0x800'b429          Code  Gb  memchr.o [12]
+__iar_Memcpy             0x800'3d61          Code  Gb  ABImemcpy.o [12]
+__iar_Memset4_word       0x800'18f5          Code  Gb  ABImemset.o [12]
+__iar_Memset_word        0x800'18e1          Code  Gb  ABImemset.o [12]
+__iar_Strchr             0x800'3d0d          Code  Gb  strchr.o [12]
+__iar_close_ttio         0x800'c30d    0x2c  Code  Gb  iarttio.o [13]
+__iar_d2uiz              0x800'b565          Code  Gb  DblToI32.o [11]
+__iar_data_init3         0x800'c8c9    0x28  Code  Gb  data_init.o [12]
+__iar_frexp              0x800'b44b          Code  Gb  frexp.o [11]
+__iar_frexp64            0x800'b43f          Code  Gb  frexp.o [11]
+__iar_frexpl             0x800'b44b          Code  Gb  frexp.o [11]
+__iar_ldexp64            0x800'b4cd          Code  Gb  ldexp.o [11]
+__iar_lookup_ttioh       0x800'c339     0x8  Code  Gb  XShttio.o [10]
+__iar_packbits_init_single3
+                         0x800'1923    0x3e  Code  Gb  packbits_init_single.o [12]
+__iar_program_start      0x800'cac1          Code  Gb  cstartup_M.o [12]
+__iar_scalbln64          0x800'b4cd          Code  Gb  ldexp.o [11]
+__iar_scalbn64           0x800'b4cd          Code  Gb  ldexp.o [11]
+__iar_ttio_handles      0x2000'006c     0x8  Data  Lc  XShttio.o [10]
+__iar_zero_init3         0x800'c839    0x3c  Code  Gb  zero_init3.o [12]
+__low_level_init         0x800'c9eb     0x4  Code  Gb  low_level_init.o [10]
+__vector_table           0x800'0000          Data  Gb  startup_stm32g071xx.o [5]
+_call_main               0x800'c9d5          Code  Gb  cmain.o [12]
+_exit                    0x800'c9f9          Code  Gb  cexit.o [12]
+_exit_2                  0x800'c9fd          Code  Gb  cexit_2.o [12]
+abort                    0x800'c2d5     0xa  Code  Gb  abort.o [10]
+all_int_status          0x2000'71e0     0x4  Data  Gb  Sensor_module.o [1]
+apn                     0x2000'0024     0x4  Data  Gb  modem_main.o [9]
+broker_ip               0x2000'0010    0x14  Data  Gb  cloud_module.o [1]
+cloud_data              0x2000'6f38    0x28  Data  Gb  cloud_module.o [1]
+conn_number             0x2000'7134     0x4  Data  Gb  cloud_module.o [1]
+crc_calc                 0x800'c181    0x38  Code  Gb  crc.o [1]
+crc_table                0x800'c340   0x200  Data  Lc  crc.o [1]
+curr_time_date          0x2000'6f0c    0x2c  Data  Gb  modem_main.o [9]
+data_temp               0x2000'7120     0x8  Data  Lc  Sensor_module.o [1]
+data_xl                 0x2000'702c    0x14  Data  Lc  Sensor_module.o [1]
+defaultTaskHandle       0x2000'715c     0x4  Data  Gb  main.o [4]
+defaultTask_attributes   0x800'c8f0    0x24  Data  Gb  main.o [4]
+demo_controller          0x800'6e4d   0x414  Code  Gb  cloud_module.o [1]
+demo_state              0x2000'6fdb     0x1  Data  Gb  cloud_module.o [1]
+dev_ctx                 0x2000'70dc    0x10  Data  Lc  Sensor_module.o [1]
+drdy                    0x2000'7256     0x1  Data  Gb  Sensor_module.o [1]
+event_buffer            0x2000'5f30   0x3e8  Data  Lc  modem_event_buffer.o [9]
+exit                     0x800'c9ef     0x8  Code  Gb  exit.o [10]
+fifo_1_tap_event        0x2000'725a     0x1  Data  Lc  Sensor_module.o [1]
+fifo_2_tap_event        0x2000'725b     0x1  Data  Lc  Sensor_module.o [1]
+frexp                    0x800'b43f          Code  Gb  frexp.o [11]
+frexpl                   0x800'b43f          Code  Gb  frexp.o [11]
+g3_hif_uart_init         0x800'a519    0x12  Code  Gb  metro_hif.o [1]
+g3_hif_uart_rx_handler   0x800'a475    0xa4  Code  Gb  metro_hif.o [1]
+g3_hif_uart_tx_handler   0x800'a18f    0x3e  Code  Gb  metro_hif.o [1]
+g3_task_comm_info       0x2000'7184     0x4  Data  Lc  metro_hif.o [1]
+g3_task_comm_info       0x2000'7004    0x14  Data  Lc  metrology_module.o [1]
+gSecSince1900           0x2000'71c4     0x4  Data  Gb  modem_main.o [9]
+getNTP_time             0x2000'7252     0x1  Data  Gb  modem_globals.o [9]
+get_nb_sent_status      0x2000'724a     0x1  Data  Gb  cloud_module.o [1]
+hdma_usart4_tx          0x2000'6b38    0x5c  Data  Gb  main.o [4]
+hi2c2                   0x2000'6bf0    0x54  Data  Gb  main.o [4]
+hif_uart_rx_free_resources
+                         0x800'a1cd     0x2  Code  Gb  metro_hif.o [1]
+hif_uart_rx_handler_init
+                         0x800'a1cf    0x26  Code  Gb  metro_hif.o [1]
+hif_uart_send_message    0x800'a0e3    0xac  Code  Gb  metro_hif.o [1]
+hif_uart_tx_handler_init
+                         0x800'a0a9    0x14  Code  Lc  metro_hif.o [1]
+hif_uart_tx_send_first_byte
+                         0x800'a0bd    0x26  Code  Lc  metro_hif.o [1]
+htim1                   0x2000'6c94    0x4c  Data  Gb  main.o [4]
+htim6                   0x2000'6d78    0x4c  Data  Gb  stm32g0xx_hal_timebase_tim.o [4]
+huart1                  0x2000'67b8    0x94  Data  Gb  main.o [4]
+huart2                  0x2000'684c    0x94  Data  Gb  main.o [4]
+huart4                  0x2000'68e0    0x94  Data  Gb  main.o [4]
+id                      0x2000'7259     0x1  Data  Gb  Sensor_module.o [1]
+idx                     0x2000'7257     0x1  Data  Gb  Sensor_module.o [1]
+ind_modem_socket_client_remote_server_closed
+                         0x800'460d     0xe  Code  Gb  modem_main.o [9]
+ind_modem_socket_data_received
+                         0x800'45f5    0x18  Code  Gb  modem_main.o [9]
+int_mode                0x2000'7244     0x2  Data  Gb  Sensor_module.o [1]
+int_route               0x2000'7242     0x2  Data  Gb  Sensor_module.o [1]
+ip_size                 0x2000'7255     0x1  Data  Gb  modem_module.o [9]
+ipread_cnt              0x2000'723c     0x2  Data  Gb  modem_module.o [9]
+iprecv_cnt              0x2000'723e     0x2  Data  Gb  modem_module.o [9]
+last_ticks              0x2000'71c0     0x4  Data  Gb  modem_main.o [9]
+ldexp                    0x800'b4cd          Code  Gb  ldexp.o [11]
+ldexpl                   0x800'b4cd          Code  Gb  ldexp.o [11]
+led_action              0x2000'718c     0x4  Data  Gb  metrology_module.o [1]
+led_cloud               0x2000'71c8     0x4  Data  Gb  modem_module.o [9]
+led_mems_action         0x2000'71d8     0x4  Data  Gb  Sensor_module.o [1]
+led_state               0x2000'712c     0x4  Data  Gb  cloud_module.o [1]
+lis2dux12_all_sources_get
+                         0x800'a9b3   0x1f0  Code  Gb  lis2dux12_reg.o [2]
+lis2dux12_device_id_get
+                         0x800'a5c1    0x14  Code  Gb  lis2dux12_reg.o [2]
+lis2dux12_exit_deep_power_down
+                         0x800'a97b    0x38  Code  Gb  lis2dux12_reg.o [2]
+lis2dux12_from_fs16g_to_mg
+                         0x800'a581    0x10  Code  Gb  lis2dux12_reg.o [2]
+lis2dux12_from_fs2g_to_mg
+                         0x800'a551    0x10  Code  Gb  lis2dux12_reg.o [2]
+lis2dux12_from_fs4g_to_mg
+                         0x800'a561    0x10  Code  Gb  lis2dux12_reg.o [2]
+lis2dux12_from_fs8g_to_mg
+                         0x800'a571    0x10  Code  Gb  lis2dux12_reg.o [2]
+lis2dux12_from_lsb_to_celsius
+                         0x800'a591    0x16  Code  Gb  lis2dux12_reg.o [2]
+lis2dux12_init_set       0x800'a5d5   0x1bc  Code  Gb  lis2dux12_reg.o [2]
+lis2dux12_int_config_set
+                         0x800'aed9    0xb0  Code  Gb  lis2dux12_reg.o [2]
+lis2dux12_mode_set       0x800'a807   0x174  Code  Gb  lis2dux12_reg.o [2]
+lis2dux12_outt_data_get
+                         0x800'aca5    0x38  Code  Gb  lis2dux12_reg.o [2]
+lis2dux12_pin_int1_route_set
+                         0x800'acdd   0x1fc  Code  Gb  lis2dux12_reg.o [2]
+lis2dux12_read_reg       0x800'c28d    0x24  Code  Wk  lis2dux12_reg.o [2]
+lis2dux12_status_get     0x800'a791    0x76  Code  Gb  lis2dux12_reg.o [2]
+lis2dux12_tap_config_set
+                         0x800'af89   0x256  Code  Gb  lis2dux12_reg.o [2]
+lis2dux12_tap_handler    0x800'75c5    0x32  Code  Gb  Sensor_module.o [1]
+lis2dux12_write_reg      0x800'c2b1    0x24  Code  Wk  lis2dux12_reg.o [2]
+lis2dux12_xl_data_get    0x800'aba3   0x102  Code  Gb  lis2dux12_reg.o [2]
+local_rx_buf            0x2000'6e4c    0x40  Data  Lc  metro_hif.o [1]
+local_rx_ptr            0x2000'724d     0x1  Data  Lc  metro_hif.o [1]
+localeconv               0x800'b9b5     0x4  Code  Gb  xlocale_c.o [10]
+m2m_modem_init           0x800'6ddd    0x16  Code  Gb  m2m_modem.o [1]
+m2m_modem_startup        0x800'6df3    0x52  Code  Gb  m2m_modem.o [1]
+m_element               0x2000'7018    0x14  Data  Gb  modem_globals.o [9]
+main                     0x800'212b   0x218  Code  Gb  main.o [4]
+md                      0x2000'71dc     0x4  Data  Lc  Sensor_module.o [1]
+memchr                   0x800'b429          Code  Gb  memchr.o [12]
+metro_timer             0x2000'7190     0x4  Data  Gb  metrology_module.o [1]
+millis                   0x800'6e45     0x8  Code  Gb  cloud_module.o [1]
+modemPushTimHandle      0x2000'6d2c    0x4c  Data  Gb  modem_globals.o [9]
+modemTick               0x2000'71ac     0x4  Data  Gb  modem_globals.o [9]
+modemTimHandle          0x2000'6ce0    0x4c  Data  Gb  modem_globals.o [9]
+modemTimeout            0x2000'71b0     0x4  Data  Gb  modem_globals.o [9]
+modem_UserDataBuff      0x2000'2f58   0xbb8  Data  Gb  modem_globals.o [9]
+modem_buffer_empty       0x800'19af    0x12  Code  Gb  modem_ring_buffer.o [9]
+modem_buffer_full        0x800'199b    0x14  Code  Gb  modem_ring_buffer.o [9]
+modem_buffer_init        0x800'1961    0x10  Code  Gb  modem_ring_buffer.o [9]
+modem_buffer_is_half_empty
+                         0x800'1989    0x12  Code  Gb  modem_ring_buffer.o [9]
+modem_buffer_is_half_full
+                         0x800'1971    0x18  Code  Gb  modem_ring_buffer.o [9]
+modem_connected         0x2000'7251     0x1  Data  Gb  modem_globals.o [9]
+modem_event_empty        0x800'1ab3    0x12  Code  Gb  modem_event_buffer.o [9]
+modem_event_full         0x800'1a97    0x1c  Code  Gb  modem_event_buffer.o [9]
+modem_event_init         0x800'1a81    0x16  Code  Gb  modem_event_buffer.o [9]
+modem_init               0x800'3d71   0x462  Code  Gb  modem_interface.o [9]
+modem_instances         0x2000'6e08    0x44  Data  Gb  modem_module.o [9]
+modem_main               0x800'445f    0x34  Code  Gb  modem_main.o [9]
+modem_network_time_buff
+                        0x2000'6e8c    0x40  Data  Gb  modem_globals.o [9]
+modem_open_sockets      0x2000'71a8     0x4  Data  Gb  modem_globals.o [9]
+modem_peripherals_init   0x800'4445    0x1a  Code  Gb  modem_main.o [9]
+modem_pop_buffer        0x2000'48c0   0x4b0  Data  Gb  modem_globals.o [9]
+modem_pop_buffer_queue   0x800'19ff    0x6e  Code  Gb  modem_ring_buffer.o [9]
+modem_pop_eventbuffer_queue
+                         0x800'1b4f    0x7e  Code  Gb  modem_event_buffer.o [9]
+modem_push_buffer_queue
+                         0x800'19c1    0x3e  Code  Gb  modem_ring_buffer.o [9]
+modem_push_eventbuffer_queue
+                         0x800'1ac5    0x8a  Code  Gb  modem_event_buffer.o [9]
+modem_reset_event        0x800'1bd5    0x18  Code  Gb  modem_event_buffer.o [9]
+modem_ring_buffer       0x2000'5220   0x4b0  Data  Lc  modem_ring_buffer.o [9]
+modem_socket_client_close
+                         0x800'435f    0x2c  Code  Gb  modem_interface.o [9]
+modem_socket_client_open
+                         0x800'41e5    0x82  Code  Gb  modem_interface.o [9]
+modem_socket_client_write
+                         0x800'42a5    0x6e  Code  Gb  modem_interface.o [9]
+modem_state             0x2000'7254     0x1  Data  Gb  modem_main.o [9]
+modem_tcp_connection     0x800'438d    0x54  Code  Gb  modem_interface.o [9]
+msg_Rx                  0x2000'6dc4    0x44  Data  Gb  metro_hif.o [1]
+myTest                  0x2000'71a4     0x4  Data  Gb  metrology_module.o [1]
+net_set_current_time     0x800'4493   0x162  Code  Gb  modem_main.o [9]
+net_set_current_time::_ytab
+                         0x800'c710    0x60  Data  Lc  modem_main.o [9]
+osDelay                  0x800'491d    0x22  Code  Gb  cmsis_os2.o [6]
+osKernelInitialize       0x800'47cf    0x26  Code  Gb  cmsis_os2.o [6]
+osKernelStart            0x800'47f5    0x2e  Code  Gb  cmsis_os2.o [6]
+osMessageQueueGet        0x800'4a81    0x8e  Code  Gb  cmsis_os2.o [6]
+osMessageQueueNew        0x800'493f    0xb4  Code  Gb  cmsis_os2.o [6]
+osMessageQueuePut        0x800'49f3    0x8e  Code  Gb  cmsis_os2.o [6]
+osMessageQueueReset      0x800'4b15    0x2c  Code  Gb  cmsis_os2.o [6]
+osThreadNew              0x800'4835    0xe8  Code  Gb  cmsis_os2.o [6]
+p_ind_modem_socket_client_remote_server_closed
+                        0x2000'71bc     0x4  Data  Gb  modem_main.o [9]
+p_ind_modem_socket_data_received
+                        0x2000'71b8     0x4  Data  Gb  modem_main.o [9]
+platform_read            0x800'7599    0x2c  Code  Lc  Sensor_module.o [1]
+platform_write           0x800'756d    0x2c  Code  Lc  Sensor_module.o [1]
+port_number             0x2000'724c     0x1  Data  Gb  main.o [4]
+prvAddCurrentTaskToDelayedList
+                         0x800'94b5    0x66  Code  Lc  tasks.o [6]
+prvAddNewTaskToReadyList
+                         0x800'8de5    0x80  Code  Lc  tasks.o [6]
+prvCheckForValidListAndQueue
+                         0x800'c07f    0x4c  Code  Lc  timers.o [6]
+prvCheckForValidListAndQueue{1}{2}{3}{4}::ucStaticTimerQueueStorage
+                        0x2000'6718    0xa0  Data  Lc  timers.o [6]
+prvCheckForValidListAndQueue{1}{2}{3}{4}::xStaticTimerQueue
+                        0x2000'6c44    0x50  Data  Lc  timers.o [6]
+prvCheckTasksWaitingTermination
+                         0x800'9335    0x38  Code  Lc  tasks.o [6]
+prvCopyDataFromQueue     0x800'9c15    0x34  Code  Lc  queue.o [6]
+prvCopyDataToQueue       0x800'9b7d    0x98  Code  Lc  queue.o [6]
+prvDeleteTCB             0x800'9385    0x38  Code  Lc  tasks.o [6]
+prvGetNextExpireTime     0x800'be49    0x28  Code  Lc  timers.o [6]
+prvHeapInit              0x800'bb15    0x5c  Code  Lc  heap_4.o [6]
+prvIdleTask              0x800'92db    0x16  Code  Lc  tasks.o [6]
+prvInitialiseNewQueue    0x800'977d    0x28  Code  Lc  queue.o [6]
+prvInitialiseNewTask     0x800'8d31    0xb4  Code  Lc  tasks.o [6]
+prvInitialiseTaskLists   0x800'92f1    0x44  Code  Lc  tasks.o [6]
+prvInsertBlockIntoFreeList
+                         0x800'bb71    0x5c  Code  Lc  heap_4.o [6]
+prvInsertTimerInActiveList
+                         0x800'be9f    0x4e  Code  Lc  timers.o [6]
+prvIsQueueEmpty          0x800'9cb7    0x1c  Code  Lc  queue.o [6]
+prvIsQueueFull           0x800'9cd3    0x1e  Code  Lc  queue.o [6]
+prvProcessExpiredTimer   0x800'bd65    0x5e  Code  Lc  timers.o [6]
+prvProcessReceivedCommands
+                         0x800'beed   0x11c  Code  Lc  timers.o [6]
+prvProcessTimerOrBlockTask
+                         0x800'bddd    0x62  Code  Lc  timers.o [6]
+prvResetNextTaskUnblockTime
+                         0x800'93bd    0x26  Code  Lc  tasks.o [6]
+prvSampleTimeNow         0x800'be79    0x26  Code  Lc  timers.o [6]
+prvSampleTimeNow::xLastTime
+                        0x2000'7234     0x4  Data  Lc  timers.o [6]
+prvSwitchTimerLists      0x800'c00d    0x72  Code  Lc  timers.o [6]
+prvTaskExitError         0x800'9551    0x16  Code  Lc  port.o [6]
+prvTimerTask             0x800'bdc3    0x1a  Code  Lc  timers.o [6]
+prvUnlockQueue           0x800'9c49    0x6e  Code  Lc  queue.o [6]
+pvPortMalloc             0x800'b9c1    0xea  Code  Gb  heap_4.o [6]
+pxCurrentTCB            0x2000'71e8     0x4  Data  Gb  tasks.o [6]
+pxCurrentTimerList      0x2000'7224     0x4  Data  Lc  timers.o [6]
+pxDelayedTaskList       0x2000'71ec     0x4  Data  Lc  tasks.o [6]
+pxEnd                   0x2000'7144     0x4  Data  Lc  heap_4.o [6]
+pxOverflowDelayedTaskList
+                        0x2000'71f0     0x4  Data  Lc  tasks.o [6]
+pxOverflowTimerList     0x2000'7228     0x4  Data  Lc  timers.o [6]
+pxPortInitialiseStack    0x800'9535    0x1a  Code  Gb  port.o [6]
+pxReadyTasksLists       0x2000'56d0   0x460  Data  Lc  tasks.o [6]
+readmetreq_error        0x2000'71a0     0x4  Data  Gb  metrology_module.o [1]
+scalbln                  0x800'b4cd          Code  Gb  ldexp.o [11]
+scalblnl                 0x800'b4cd          Code  Gb  ldexp.o [11]
+scalbn                   0x800'b4cd          Code  Gb  ldexp.o [11]
+scalbnl                  0x800'b4cd          Code  Gb  ldexp.o [11]
+scale                    0x800'8bd1    0x44  Code  Lc  xprintffull_nomb.o [10]
+sckt_type               0x2000'724b     0x1  Data  Gb  main.o [4]
+sec_hand                0x2000'7238     0x4  Data  Lc  xfail_s.o [10]
+server_ip               0x2000'0000    0x10  Data  Gb  cloud_module.o [1]
+server_port             0x2000'7130     0x4  Data  Gb  cloud_module.o [1]
+setreq_error            0x2000'719c     0x4  Data  Gb  metrology_module.o [1]
+sizeTest                0x2000'7247     0x1  Data  Gb  cloud_module.o [1]
+sprintf                  0x800'3ccd    0x40  Code  Gb  sprintf.o [10]
+spy_buff_size           0x2000'7240     0x2  Data  Gb  modem_module.o [9]
+st87_rst_counter        0x2000'713c     0x4  Data  Gb  cloud_module.o [1]
+status                  0x2000'7258     0x1  Data  Gb  Sensor_module.o [1]
+strchr                   0x800'3d0d          Code  Gb  strchr.o [12]
+strlen                   0x800'3cbd          Code  Gb  strlen.o [12]
+strstr                   0x800'3c8d    0x2e  Code  Gb  strstr.o [10]
+temp_avg                0x2000'6f60    0x28  Data  Gb  Sensor_module.o [1]
+tempo                   0x2000'71b4     0x4  Data  Gb  modem_interface.o [9]
+time_ind_modem_socket_client_remote_server_closed
+                         0x800'4647    0x12  Code  Gb  modem_main.o [9]
+time_ind_modem_socket_data_received
+                         0x800'461b    0x2c  Code  Gb  modem_main.o [9]
+timeout_error_counter   0x2000'7194     0x4  Data  Gb  metrology_module.o [1]
+try_again               0x2000'0074     0x1  Data  Gb  cloud_module.o [1]
+txBuff                  0x2000'7198     0x4  Data  Gb  metrology_module.o [1]
+uart_rx_parser_data     0x2000'6fac    0x18  Data  Lc  metro_hif.o [1]
+uart_rx_parser_data_buffer
+                        0x2000'7188     0x4  Data  Lc  metro_hif.o [1]
+uart_rx_parser_get_cmdid
+                         0x800'a24b    0x18  Code  Lc  metro_hif.o [1]
+uart_rx_parser_get_counter
+                         0x800'a2e1    0x44  Code  Lc  metro_hif.o [1]
+uart_rx_parser_get_crc   0x800'a3d1    0x92  Code  Lc  metro_hif.o [1]
+uart_rx_parser_get_msglen
+                         0x800'a263    0x66  Code  Lc  metro_hif.o [1]
+uart_rx_parser_get_payload
+                         0x800'a339    0x84  Code  Lc  metro_hif.o [1]
+uart_rx_parser_get_secmode
+                         0x800'a2c9    0x18  Code  Lc  metro_hif.o [1]
+uart_rx_parser_get_tag   0x800'a3bd     0x6  Code  Lc  metro_hif.o [1]
+uart_rx_parser_search_preamble
+                         0x800'a1f5    0x56  Code  Lc  metro_hif.o [1]
+uart_tx_handler_data    0x2000'7110     0x8  Data  Lc  metro_hif.o [1]
+uart_tx_handler_data_buffer
+                        0x2000'6518   0x200  Data  Lc  metro_hif.o [1]
+ucHeap                  0x2000'0078  0x2ee0  Data  Lc  heap_4.o [6]
+udp_timer               0x2000'7128     0x4  Data  Gb  cloud_module.o [1]
+ulSetInterruptMaskFromISR
+                         0x800'c159          Code  Gb  portasm.o [6]
+uwTick                  0x2000'71e4     0x4  Data  Gb  stm32g0xx_hal.o [8]
+uwTickFreq              0x2000'0075     0x1  Data  Gb  stm32g0xx_hal.o [8]
+uwTickPrio              0x2000'002c     0x4  Data  Gb  stm32g0xx_hal.o [8]
+uxCriticalNesting       0x2000'0028     0x4  Data  Lc  port.o [6]
+uxCurrentNumberOfTasks  0x2000'71f8     0x4  Data  Lc  tasks.o [6]
+uxDeletedTasksWaitingCleanUp
+                        0x2000'71f4     0x4  Data  Lc  tasks.o [6]
+uxListRemove             0x800'bc67    0x2a  Code  Gb  list.o [6]
+uxSchedulerSuspended    0x2000'7220     0x4  Data  Lc  tasks.o [6]
+uxTaskNumber            0x2000'7214     0x4  Data  Lc  tasks.o [6]
+uxTopReadyPriority      0x2000'7200     0x4  Data  Lc  tasks.o [6]
+vApplicationGetIdleTaskMemory
+                         0x800'bc91    0x18  Code  Wk  cmsis_os2.o [6]
+vApplicationGetIdleTaskMemory::Idle_Stack
+                        0x2000'6318   0x200  Data  Lc  cmsis_os2.o [6]
+vApplicationGetIdleTaskMemory::Idle_TCB
+                        0x2000'6a80    0x5c  Data  Lc  cmsis_os2.o [6]
+vApplicationGetTimerTaskMemory
+                         0x800'c2e1    0x18  Code  Wk  cmsis_os2.o [6]
+vApplicationGetTimerTaskMemory::Timer_Stack
+                        0x2000'5b30   0x400  Data  Lc  cmsis_os2.o [6]
+vApplicationGetTimerTaskMemory::Timer_TCB
+                        0x2000'6adc    0x5c  Data  Lc  cmsis_os2.o [6]
+vClearInterruptMaskFromISR
+                         0x800'c161          Code  Gb  portasm.o [6]
+vListInitialise          0x800'bbf5    0x1e  Code  Gb  list.o [6]
+vListInitialiseItem      0x800'bc13     0x6  Code  Gb  list.o [6]
+vListInsert              0x800'bc31    0x36  Code  Gb  list.o [6]
+vListInsertEnd           0x800'bc19    0x18  Code  Gb  list.o [6]
+vPortEnterCritical       0x800'95a5    0x14  Code  Gb  port.o [6]
+vPortExitCritical        0x800'95b9    0x1e  Code  Gb  port.o [6]
+vPortFree                0x800'baad    0x68  Code  Gb  heap_4.o [6]
+vPortSetupTimerInterrupt
+                         0x800'95f7    0x24  Code  Wk  port.o [6]
+vPortStartFirstTask      0x800'c137          Code  Gb  portasm.o [6]
+vPortYield               0x800'9591    0x12  Code  Gb  port.o [6]
+vQueueAddToRegistry      0x800'9cf3    0x2a  Code  Gb  queue.o [6]
+vQueueWaitForMessageRestricted
+                         0x800'9d21    0x4c  Code  Gb  queue.o [6]
+vSetMSP                  0x800'c0f1          Code  Gb  portasm.o [6]
+vTaskDelay               0x800'8e65    0x32  Code  Gb  tasks.o [6]
+vTaskInternalSetTimeOutState
+                         0x800'9251     0xe  Code  Gb  tasks.o [6]
+vTaskMissedYield         0x800'92d3     0x8  Code  Gb  tasks.o [6]
+vTaskPlaceOnEventList    0x800'9165    0x26  Code  Gb  tasks.o [6]
+vTaskPlaceOnEventListRestricted
+                         0x800'9195    0x32  Code  Gb  tasks.o [6]
+vTaskStartScheduler      0x800'8eb5    0x74  Code  Gb  tasks.o [6]
+vTaskSuspendAll          0x800'8f29     0xa  Code  Gb  tasks.o [6]
+vTaskSwitchContext       0x800'9101    0x5c  Code  Gb  tasks.o [6]
+val                     0x2000'70fc     0xc  Data  Gb  Sensor_module.o [1]
+xActiveTimerList1       0x2000'70a4    0x14  Data  Lc  timers.o [6]
+xActiveTimerList2       0x2000'70b8    0x14  Data  Lc  timers.o [6]
+xBlockAllocatedBit      0x2000'7158     0x4  Data  Lc  heap_4.o [6]
+xDelayedTaskList1       0x2000'7040    0x14  Data  Lc  tasks.o [6]
+xDelayedTaskList2       0x2000'7054    0x14  Data  Lc  tasks.o [6]
+xFreeBytesRemaining     0x2000'7148     0x4  Data  Lc  heap_4.o [6]
+xHeapStructSize          0x800'cea4     0x4  Data  Lc  heap_4.o [6]
+xIdleTaskHandle         0x2000'721c     0x4  Data  Lc  tasks.o [6]
+xMinimumEverFreeBytesRemaining
+                        0x2000'714c     0x4  Data  Lc  heap_4.o [6]
+xNextTaskUnblockTime    0x2000'7218     0x4  Data  Lc  tasks.o [6]
+xNumOfOverflows         0x2000'7210     0x4  Data  Lc  tasks.o [6]
+xNumberOfSuccessfulAllocations
+                        0x2000'7150     0x4  Data  Lc  heap_4.o [6]
+xNumberOfSuccessfulFrees
+                        0x2000'7154     0x4  Data  Lc  heap_4.o [6]
+xPendedTicks            0x2000'7208     0x4  Data  Lc  tasks.o [6]
+xPendingReadyList       0x2000'7068    0x14  Data  Lc  tasks.o [6]
+xPortStartScheduler      0x800'9567    0x2a  Code  Gb  port.o [6]
+xPortSysTickHandler      0x800'95d7    0x20  Code  Gb  port.o [6]
+xQueueGenericCreate      0x800'9739    0x44  Code  Gb  queue.o [6]
+xQueueGenericCreateStatic
+                         0x800'96b5    0x82  Code  Gb  queue.o [6]
+xQueueGenericReset       0x800'963d    0x76  Code  Gb  queue.o [6]
+xQueueGenericSend        0x800'97a5   0x14e  Code  Gb  queue.o [6]
+xQueueGenericSendFromISR
+                         0x800'98f5    0xba  Code  Gb  queue.o [6]
+xQueueReceive            0x800'99b1   0x130  Code  Gb  queue.o [6]
+xQueueReceiveFromISR     0x800'9ae1    0x9c  Code  Gb  queue.o [6]
+xQueueRegistry          0x2000'6ecc    0x40  Data  Gb  queue.o [6]
+xSchedulerRunning       0x2000'7204     0x4  Data  Lc  tasks.o [6]
+xStart                  0x2000'7108     0x8  Data  Lc  heap_4.o [6]
+xSuspendedTaskList      0x2000'7090    0x14  Data  Lc  tasks.o [6]
+xTaskCheckForTimeOut     0x800'9265    0x6e  Code  Gb  tasks.o [6]
+xTaskCreate              0x800'8cc5    0x6c  Code  Gb  tasks.o [6]
+xTaskCreateStatic        0x800'8c55    0x70  Code  Gb  tasks.o [6]
+xTaskGetSchedulerState   0x800'93e9    0x1e  Code  Gb  tasks.o [6]
+xTaskGetTickCount        0x800'8ff1     0x6  Code  Gb  tasks.o [6]
+xTaskIncrementTick       0x800'901d    0xe2  Code  Gb  tasks.o [6]
+xTaskPriorityDisinherit
+                         0x800'9429    0x6e  Code  Gb  tasks.o [6]
+xTaskRemoveFromEventList
+                         0x800'91d1    0x6a  Code  Gb  tasks.o [6]
+xTaskResumeAll           0x800'8f39    0xb8  Code  Gb  tasks.o [6]
+xTasksWaitingTermination
+                        0x2000'707c    0x14  Data  Lc  tasks.o [6]
+xTickCount              0x2000'71fc     0x4  Data  Lc  tasks.o [6]
+xTimerCreateTimerTask    0x800'bca9    0x56  Code  Gb  timers.o [6]
+xTimerGenericCommand     0x800'bd01    0x62  Code  Gb  timers.o [6]
+xTimerQueue             0x2000'722c     0x4  Data  Lc  timers.o [6]
+xTimerTaskHandle        0x2000'7230     0x4  Data  Lc  timers.o [6]
+xYieldPending           0x2000'720c     0x4  Data  Lc  tasks.o [6]
+
+
+[1] = C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\Apps_139222153124407364.dir
+[2] = C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\BSP_16987466797925798938.dir
+[3] = C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\CMSIS_6603591812247902717.dir
+[4] = C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\Core_13247989168731456611.dir
+[5] = C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\EWARM_18443280873093131863.dir
+[6] = C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\FreeRTOS_4809373609813369194.dir
+[7] = C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\Libs_3913195376021097889.dir
+[8] = C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\STM32G0xx_HAL_Driver_14800413719917403617.dir
+[9] = C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\ST87_G071xB_SL\Obj\m2m_modem_2353766246464904183.dir
+[10] = dl6M_tlf.a
+[11] = m6M_tl.a
+[12] = rt6M_tl.a
+[13] = shb_l.a
+
+  50'442 bytes of readonly  code memory
+   2'570 bytes of readonly  data memory
+  31'322 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
