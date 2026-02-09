@@ -243,9 +243,9 @@
                     <state>PCB_1_2</state>
                     <state>PCB_1_0NO</state>
                     <state>CES25NO</state>
-                    <state>LIS2DUX12</state>
+                    <state>LIS2DUX12NO</state>
                     <state>LIS2DU12NO</state>
-                    <state>LIS2DW12NO</state>
+                    <state>LIS2DW12</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>

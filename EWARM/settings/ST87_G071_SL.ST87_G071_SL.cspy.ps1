@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\iar\ewarm-9.70.1\common\bin\cspybat" -f "C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\settings\ST87_G071_SL.ST87_G071_SL.general.xcl" --backend -f "C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\settings\ST87_G071_SL.ST87_G071_SL.driver.xcl" 
+& "C:\iar\ewarm-9.70.1\common\bin\cspybat" -f "C:\Users\bernard6\OneDrive - STMicroelectronics\Documents\street_lighting_fw_europe_distributech\ST87_G071_SL_V008b\EWARM\settings\ST87_G071_SL.ST87_G071_SL.general.xcl" --backend -f "C:\Users\bernard6\OneDrive - STMicroelectronics\Documents\street_lighting_fw_europe_distributech\ST87_G071_SL_V008b\EWARM\settings\ST87_G071_SL.ST87_G071_SL.driver.xcl" 
 }
 else
 {
-& "C:\iar\ewarm-9.70.1\common\bin\cspybat" -f "C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\settings\ST87_G071_SL.ST87_G071_SL.general.xcl" --debug_file=$debugfile --backend -f "C:\0_Work\NBIOT\myFW\ST87_G071_SL_V008b\EWARM\settings\ST87_G071_SL.ST87_G071_SL.driver.xcl" 
+& "C:\iar\ewarm-9.70.1\common\bin\cspybat" -f "C:\Users\bernard6\OneDrive - STMicroelectronics\Documents\street_lighting_fw_europe_distributech\ST87_G071_SL_V008b\EWARM\settings\ST87_G071_SL.ST87_G071_SL.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\bernard6\OneDrive - STMicroelectronics\Documents\street_lighting_fw_europe_distributech\ST87_G071_SL_V008b\EWARM\settings\ST87_G071_SL.ST87_G071_SL.driver.xcl" 
 }

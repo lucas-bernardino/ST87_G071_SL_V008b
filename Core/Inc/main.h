@@ -116,7 +116,7 @@ void MX_TIM1_Init(void);
 #define APN_APP                (APN_1NCE)
 
 #define AMARI_BANDS            "8"
-#define EU_BANDS               "20,8,3"
+#define EU_BANDS               "20,8" 
 #define US_BANDS               "4,12"  
 #define BRA_BANDS              "28,3" 
 #define BANDS_APP              (EU_BANDS)
