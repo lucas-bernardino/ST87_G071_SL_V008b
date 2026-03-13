@@ -25,19 +25,19 @@
         <MemConfigValue>C:\iar\ewarm-9.70.1\arm\config\debugger\ST\STM32G071GB.ddf</MemConfigValue>
     </PlDriver>
     <StLinkDriver>
-        <stlinkserialNo>066BFF383337554E43223706</stlinkserialNo>
+        <stlinkserialNo>0668FF383333554157211620</stlinkserialNo>
         <stlinkfoundProbes />
-        <stlinkResetStyle>0</stlinkResetStyle>
-        <stlinkResetStrategy>2</stlinkResetStrategy>
         <LeaveTargetRunning>_ 0</LeaveTargetRunning>
         <CStepIntDis>_ 0</CStepIntDis>
+        <stlinkResetStyle>0</stlinkResetStyle>
+        <stlinkResetStrategy>2</stlinkResetStrategy>
     </StLinkDriver>
     <ArmDriver>
-        <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
         <EnableCache>0</EnableCache>
+        <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
     </ArmDriver>
     <DebugChecksum>
-        <Checksum>904883356</Checksum>
+        <Checksum>300617873</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -80,11 +80,6 @@
         <Enabled>0</Enabled>
         <ShowSource>0</ShowSource>
     </Trace2>
-    <Aliases>
-        <Count>0</Count>
-        <SuppressDialog>0</SuppressDialog>
-        <SuppressResolveSourcesForDebugTarget>1</SuppressResolveSourcesForDebugTarget>
-    </Aliases>
     <TermIOLog>
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
@@ -103,7 +98,7 @@
         <Bp7>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.466.13" 0 0 1 "" 0 "" 0</Bp7>
         <Bp8>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.386.11" 0 0 1 "" 0 "" 0</Bp8>
         <Bp9>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.673.7" 0 0 1 "" 0 "" 0</Bp9>
-        <Bp10>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.496.11" 0 0 1 "" 0 "" 0</Bp10>
+        <Bp10>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.496.11" 0 0 1 "" 0 "" 0</Bp10>
         <Bp11>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.474.11" 0 0 1 "" 0 "" 0</Bp11>
         <Bp12>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.636.1" 0 0 1 "" 0 "" 0</Bp12>
         <Bp13>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.635.1" 0 0 1 "" 0 "" 0</Bp13>
@@ -155,4 +150,9 @@
         <Bp59>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Sensor\src\Sensor_module.c}.298.1" 0 0 1 "" 0 "" 0</Bp59>
         <Count>60</Count>
     </Breakpoints2>
+    <Aliases>
+        <Count>0</Count>
+        <SuppressDialog>0</SuppressDialog>
+        <SuppressResolveSourcesForDebugTarget>1</SuppressResolveSourcesForDebugTarget>
+    </Aliases>
 </settings>

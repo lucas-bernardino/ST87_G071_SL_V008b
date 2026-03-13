@@ -89,11 +89,14 @@ void MX_TIM1_Init(void);
 
 /* USER CODE BEGIN Private defines */
 
-#define COMM_DEBUG
-//#define DEBUG_MODE
+// bernardino: defined DEBUG_MODE instead of normal COMM_DEBUG
+//#define COMM_DEBUG
+#define DEBUG_MODE
 
-//#define AME_DEMO
-#define EU_DEMO
+
+#define AME_DEMO
+// bernardino: commented the line below to run in US mode
+//#define EU_DEMO
 
 #define UDP_ECHO_SERVER            1777               /* Echo Server for UDP messages */
 #define TCP_ECHO_SERVER            1778               /* Echo Server for UDP messages */
@@ -119,7 +122,7 @@ void MX_TIM1_Init(void);
 #define EU_BANDS               "20,8" 
 #define US_BANDS               "4,12"  
 #define BRA_BANDS              "28,3" 
-#define BANDS_APP              (EU_BANDS)
+#define BANDS_APP              (BRA_BANDS) // bernardino: selected BRA_BANDS instead of EU_BANDS
 
 #define TCP_TYPE               0
 #define UDP_TYPE               1
