@@ -105,11 +105,16 @@ void MX_TIM1_Init(void);
 #define EU_UDP_SERVER_PORT         1338               /* EU udp server port */
 #define EU_UDP_SERVER_PORT2        1339               /* EU udp server port 2*/
 
-#define US_TCP_SERVER_PORT         1900               /* US tcp server port */
+//#define US_TCP_SERVER_PORT         1900               /* US tcp server port */
+#define US_TCP_SERVER_PORT         1340               /* US tcp server port FOR JOINSTLAB.COM*/ //bernardino added
+
+
 #define EU_TCP_SERVER_PORT         1901               /* EU tcp server port */
 #define EU_TCP_SERVER_PORT2        1902               /* EU tcp server port */
 
-#define SERVER_IP              "162.248.102.96"       /* joinstlab.net */
+//#define SERVER_IP              "162.248.102.96"       /* joinstlab.net */
+
+#define SERVER_IP              "162.248.100.86"       /* joinstlab.com */ //bernardino addded
 
 #define APN_TIM                "nbiot.gsim"           /* apn for TIM */
 #define APN_AMARI              "Default"              /* apn for Amari callbox */
