@@ -95,6 +95,8 @@ typedef struct
 
 modem_instances_t modem_instances;
 
+static void bin_to_hex(const uint8_t *bin, uint16_t len, char *out);
+
 /***********All Buffers**************/
 
 #if defined (__CC_ARM)
@@ -385,14 +387,26 @@ void Modem_TIM_Handler(TIM_HandleTypeDef *htim)
         case MODEM_CLIENT_SOCKET_OPEN_EVENT:  
           Modem_Reset_AT_CMD_Buffer();
           /* AT#SOCKETCREATE */  
-          if (strchr(Modem_Counter_Variables.curr_protocol,'T')) //T of TCP
+          //if (strchr(Modem_Counter_Variables.curr_protocol,'T')) //T of TCP
+          /*
+          bernardino: i changed the if statments to check for the protocol, because previously it was 
+          checking if a given char was in the curr_protocol, however, since both MQTT and TCP have a T on it, it was causing a bug.
+          Now, im checking if the first character starts with T, U or M, (and casting it to ascii value)
+          */
+          if (Modem_Counter_Variables.curr_protocol[0] == (int)'T') //T of TCP
           {
             sprintf((char*)Modem_AT_Cmd_Buff,"AT#SOCKETCREATE=5,0,%s,%d,100,100,1\r",Modem_Counter_Variables.curr_protocol,(int)Modem_Counter_Variables.curr_port_number);
           }
-          else if (strchr(Modem_Counter_Variables.curr_protocol,'U')) //U of UDP 
+          else if (Modem_Counter_Variables.curr_protocol[0] == (int)'U') //U of UDP 
           {
             sprintf((char*)Modem_AT_Cmd_Buff,"AT#SOCKETCREATE=5,0,UDP,%d,1,1,1\r", (int)Modem_Counter_Variables.curr_port_number);             
           }
+          else if (Modem_Counter_Variables.curr_protocol[0] == (int)'M') //M of MQT (bernardino added)
+          {
+            sprintf((char*)Modem_AT_Cmd_Buff,"AT#SOCKETCREATE=5,0,TCP,%d,10,10\r", (int)Modem_Counter_Variables.curr_port_number);             
+                                            // AT#SOCKETCREATE=5,0,TCP,1883,10,10
+          }
+          
           status = Modem_Transmit_AT_Cmd(strlen((char*)Modem_AT_Cmd_Buff));          
           if(status != MODEM_MODULE_SUCCESS)
           {
@@ -409,7 +423,8 @@ void Modem_TIM_Handler(TIM_HandleTypeDef *htim)
         case MODEM_MQTT_CLIENT_SOCKET_OPEN_EVENT:  
             /* AT#MQTTCONNECT */  
             //sprintf((char*)Modem_AT_Cmd_Buff,"AT#MQTTCONNECT=5,0,%s,%d\r", Modem_Counter_Variables.curr_hostname, (int)Modem_Counter_Variables.curr_port_number); 
-            sprintf((char*)Modem_AT_Cmd_Buff,"AT#MQTTCONNECT=5,0,162.248.102.207,1883\r"); //,nano,stmicro123\r");  //5,0,%s,%d\r", Modem_Counter_Variables.curr_hostname, (int)Modem_Counter_Variables.curr_port_number); 
+            //sprintf((char*)Modem_AT_Cmd_Buff,"AT#MQTTCONNECT=5,0,162.248.102.207,1883\r"); //,nano,stmicro123\r");  //5,0,%s,%d\r", Modem_Counter_Variables.curr_hostname, (int)Modem_Counter_Variables.curr_port_number); 
+            sprintf((char*)Modem_AT_Cmd_Buff,"AT#MQTTCONNECT=5,0,%s,%d\r", Modem_Counter_Variables.curr_hostname,(int)Modem_Counter_Variables.curr_port_number); 
             status = Modem_Transmit_AT_Cmd(strlen((char*)Modem_AT_Cmd_Buff));          
             if(status != MODEM_MODULE_SUCCESS)
             {
@@ -427,7 +442,15 @@ void Modem_TIM_Handler(TIM_HandleTypeDef *htim)
             
         case MODEM_MQTT_CLIENT_PUBLISH_MESSAGE:
             /* AT#MQTTPUB */  
-            sprintf((char*)Modem_AT_Cmd_Buff,"AT#MQTTPUB=%s,%d,3,0\r",Modem_Counter_Variables.topic,Modem_Counter_Variables.topic_message);//Modem_Counter_Variables.curr_hostname, (int)Modem_Counter_Variables.curr_port_number); 
+            //sprintf((char*)Modem_AT_Cmd_Buff,"AT#MQTTPUB=%s,%d,3,0\r",Modem_Counter_Variables.topic, Modem_Counter_Variables.topic_message);//Modem_Counter_Variables.curr_hostname, (int)Modem_Counter_Variables.curr_port_number); 
+            char hex_payload[40 * 2 + 1]; // cloud_data size is 40
+            
+            bin_to_hex(Modem_Counter_Variables.topic_message,
+               Modem_Counter_Variables.topic_message_len,
+               hex_payload);
+            sprintf((char*)Modem_AT_Cmd_Buff,"AT#MQTTPUB=%s,%s\r",Modem_Counter_Variables.topic, hex_payload);
+            
+            // bernardino: parei aqui na quinta-feira
             status = Modem_Transmit_AT_Cmd(strlen((char*)Modem_AT_Cmd_Buff));          
             if(status != MODEM_MODULE_SUCCESS)
             {
@@ -1699,7 +1722,7 @@ void Modem_Queue_Mqtt_Client_Open_Event(uint8_t * serverIP, uint32_t port_number
 
 
 
-void Modem_Queue_Mqtt_Publish_Event(char *topic, char *mes)
+void Modem_Queue_Mqtt_Publish_Event(char *topic, char *mes, uint16_t len)
 {
     Modem_Wait_For_Sock_Read_To_Complete();
     //Modem_Counter_Variables.curr_hostname = serverIP;
@@ -1708,6 +1731,7 @@ void Modem_Queue_Mqtt_Publish_Event(char *topic, char *mes)
     //Modem_Counter_Variables.curr_sockID = scktID;
     Modem_Counter_Variables.topic = topic;
     Modem_Counter_Variables.topic_message = mes;
+    Modem_Counter_Variables.topic_message_len = len;
     modem_instances.modem_event.event = MODEM_MQTT_CLIENT_PUBLISH_MESSAGE;
     
     __disable_irq();
@@ -2539,6 +2563,18 @@ __weak void ind_modem_resuming(void)
 {
 }
 
+
+
+// bernardino: added this to convert from bytes to char (to be used in mqtt pub)
+static void bin_to_hex(const uint8_t *bin, uint16_t len, char *out)
+{
+    static const char hex[] = "0123456789ABCDEF";
+    for (uint16_t i = 0; i < len; ++i) {
+        out[2*i]     = hex[bin[i] >> 4];
+        out[2*i + 1] = hex[bin[i] & 0x0F];
+    }
+    out[2 * len] = '\0';
+}
 
 
 /**

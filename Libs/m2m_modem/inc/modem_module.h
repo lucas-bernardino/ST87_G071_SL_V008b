@@ -313,6 +313,7 @@ typedef struct
   uint8_t * temp;       //pop buffer temporary
   char *topic;
   char *topic_message;
+  uint16_t topic_message_len; // bernardino added this
   
   char * curr_data;
   
@@ -492,6 +493,11 @@ void Modem_HAL_UART_ErrorCallback(UART_HandleTypeDef *UartHandle);
 
 uint8_t Modem_Get_Sckt_Closed_Status (void);
 void Modem_Clear_Sckt_Closed_Status (void);
+
+
+// bernardino added
+void Modem_Queue_Mqtt_Client_Open_Event(uint8_t * serverIP, uint32_t port_number);
+void Modem_Queue_Mqtt_Publish_Event(char *topic, char *mes, uint16_t len);
 
 
 /*----------------------------- Private variables -------------------------------------*/

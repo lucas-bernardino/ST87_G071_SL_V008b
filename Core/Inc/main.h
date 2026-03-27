@@ -131,6 +131,7 @@ void MX_TIM1_Init(void);
 
 #define TCP_TYPE               0
 #define UDP_TYPE               1
+#define MQTT_TYPE              2 // bernardino added
 
 #define TTI_DEFAULT 10     /* interval between transmissions */  
 
@@ -140,6 +141,12 @@ extern uint8_t port_number;
 //#define MEMS_TYPE               (LIS2DUX12)
 //#define MEMS_TYPE               (LIS2DU12) 
 //#define MEMS_TYPE               (LIS2DUX12) 
+
+
+// MQTT CONFIG bernardino
+#define MQTT_DEMO // comment this line if not using mqtt. The check is done in line 221 in file cloud_module.c
+#define MQTT_PORT 1883
+
 
 
 /* USER CODE END Private defines */
