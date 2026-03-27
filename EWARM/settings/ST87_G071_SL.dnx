@@ -37,7 +37,7 @@
         <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
     </ArmDriver>
     <DebugChecksum>
-        <Checksum>1152506729</Checksum>
+        <Checksum>624434747</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnThrow>_ 0</StopOnThrow>
@@ -89,16 +89,16 @@
     </DisassembleMode>
     <Breakpoints2>
         <Bp0>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.801.1" 0 0 1 "" 0 "" 0</Bp0>
-        <Bp1>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.726.1" 0 0 1 "" 0 "" 0</Bp1>
-        <Bp2>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1882.1" 0 0 1 "" 0 "" 0</Bp2>
+        <Bp1>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.729.1" 0 0 1 "" 0 "" 0</Bp1>
+        <Bp2>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1957.1" 0 0 1 "" 0 "" 0</Bp2>
         <Bp3>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.644.1" 0 0 1 "" 0 "" 0</Bp3>
-        <Bp4>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.652.5" 0 0 1 "" 0 "" 0</Bp4>
+        <Bp4>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.655.5" 0 0 1 "" 0 "" 0</Bp4>
         <Bp5>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.390.11" 0 0 1 "" 0 "" 0</Bp5>
         <Bp6>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_interface.c}.1084.3" 0 0 1 "" 0 "" 0</Bp6>
-        <Bp7>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.489.13" 0 0 1 "" 0 "" 0</Bp7>
+        <Bp7>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.492.13" 0 0 1 "" 0 "" 0</Bp7>
         <Bp8>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.388.11" 0 0 1 "" 0 "" 0</Bp8>
-        <Bp9>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.696.7" 0 0 1 "" 0 "" 0</Bp9>
-        <Bp10>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.497.11" 0 0 1 "" 0 "" 0</Bp10>
+        <Bp9>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.699.7" 0 0 1 "" 0 "" 0</Bp9>
+        <Bp10>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.500.11" 0 0 1 "" 0 "" 0</Bp10>
         <Bp11>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.636.1" 0 0 1 "" 0 "" 0</Bp11>
         <Bp12>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.635.1" 0 0 1 "" 0 "" 0</Bp12>
         <Bp13>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.634.9" 0 0 1 "" 0 "" 0</Bp13>
@@ -107,49 +107,50 @@
         <Bp16>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.636.9" 0 0 1 "" 0 "" 0</Bp16>
         <Bp17>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.637.9" 0 0 1 "" 0 "" 0</Bp17>
         <Bp18>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.644.9" 0 0 1 "" 0 "" 0</Bp18>
-        <Bp19>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1234.1" 0 0 1 "" 0 "" 0</Bp19>
-        <Bp20>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1214.11" 0 0 1 "" 0 "" 0</Bp20>
-        <Bp21>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1234.7" 0 0 1 "" 0 "" 0</Bp21>
+        <Bp19>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1237.1" 0 0 1 "" 0 "" 0</Bp19>
+        <Bp20>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1217.11" 0 0 1 "" 0 "" 0</Bp20>
+        <Bp21>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1237.7" 0 0 1 "" 0 "" 0</Bp21>
         <Bp22>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.390.16" 0 0 1 "" 0 "" 0</Bp22>
         <Bp23>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.802.1" 0 0 1 "" 0 "" 0</Bp23>
         <Bp24>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.1047.1" 0 0 1 "" 0 "" 0</Bp24>
         <Bp25>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Drivers\BSP\cloud\src\lis2du12_reg.c}.654.3" 0 0 1 "" 0 "" 0</Bp25>
         <Bp26>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Sensor\src\Sensor_module.c}.497.3" 0 0 1 "" 0 "" 0</Bp26>
-        <Bp27>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1029.11" 0 0 1 "" 0 "" 0</Bp27>
+        <Bp27>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1032.11" 0 0 1 "" 0 "" 0</Bp27>
         <Bp28>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Drivers\BSP\cloud\src\stm32_st87m01.c}.280.5" 0 0 1 "" 0 "" 0</Bp28>
         <Bp29>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Drivers\BSP\cloud\src\stm32_st87m01.c}.419.9" 0 0 1 "" 0 "" 0</Bp29>
         <Bp30>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.291.15" 0 0 1 "" 0 "" 0</Bp30>
         <Bp31>_ 0 "EMUL_DATA" "AT_SHORT_TIMEOUT" 0 0 0 0 4294967295</Bp31>
         <Bp32>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Core\Src\stm32g0xx_it.c}.122.3" 0 0 1 "" 0 "" 0</Bp32>
         <Bp33>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Drivers\STM32G0xx_HAL_Driver\Src\stm32g0xx_hal_uart.c}.3717.5" 0 0 1 "" 0 "" 0</Bp33>
-        <Bp34>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.2084.1" 0 0 1 "" 0 "" 0</Bp34>
-        <Bp35>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1273.11" 0 0 1 "" 0 "" 0</Bp35>
+        <Bp34>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.2154.1" 0 0 1 "" 0 "" 0</Bp34>
+        <Bp35>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1276.11" 0 0 1 "" 0 "" 0</Bp35>
         <Bp36>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_interface.c}.780.5" 0 0 1 "" 0 "" 0</Bp36>
-        <Bp37>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1628.1" 0 0 1 "" 0 "" 0</Bp37>
-        <Bp38>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1628.5" 0 0 1 "" 0 "" 0</Bp38>
-        <Bp39>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1882.5" 0 0 1 "" 0 "" 0</Bp39>
-        <Bp40>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1242.7" 0 0 1 "" 0 "" 0</Bp40>
+        <Bp37>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1703.1" 0 0 1 "" 0 "" 0</Bp37>
+        <Bp38>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1703.5" 0 0 1 "" 0 "" 0</Bp38>
+        <Bp39>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1957.5" 0 0 1 "" 0 "" 0</Bp39>
+        <Bp40>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1245.7" 0 0 1 "" 0 "" 0</Bp40>
         <Bp41>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_interface.c}.863.18" 0 0 1 "" 0 "" 0</Bp41>
         <Bp42>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.357.11" 0 0 1 "" 0 "" 0</Bp42>
         <Bp43>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_main.c}.547.18" 0 0 1 "" 0 "" 0</Bp43>
-        <Bp44>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.514.18" 0 0 1 "" 0 "" 0</Bp44>
-        <Bp45>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.489.17" 0 0 1 "" 0 "" 0</Bp45>
-        <Bp46>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1303.11" 0 0 1 "" 0 "" 0</Bp46>
+        <Bp44>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.521.18" 0 0 1 "" 0 "" 0</Bp44>
+        <Bp45>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.496.17" 0 0 1 "" 0 "" 0</Bp45>
+        <Bp46>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1306.11" 0 0 1 "" 0 "" 0</Bp46>
         <Bp47>_ 0 "EMUL_DATA" "UDP_Server_send" 0 0 0 0 4294967295</Bp47>
         <Bp48>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_main.c}.549.3" 0 0 1 "" 0 "" 0</Bp48>
-        <Bp49>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.449.13" 0 0 1 "" 0 "" 0</Bp49>
+        <Bp49>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.456.13" 0 0 1 "" 0 "" 0</Bp49>
         <Bp50>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.298.13" 0 0 1 "" 0 "" 0</Bp50>
         <Bp51>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_interface.c}.170.3" 0 0 1 "" 0 "" 0</Bp51>
         <Bp52>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.186.1" 0 0 1 "" 0 "" 0</Bp52>
-        <Bp53>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.673.7" 0 0 1 "" 0 "" 0</Bp53>
-        <Bp54>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.415.17" 0 0 1 "" 0 "" 0</Bp54>
-        <Bp55>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.677.7" 0 0 1 "" 0 "" 0</Bp55>
+        <Bp53>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.676.7" 0 0 1 "" 0 "" 0</Bp53>
+        <Bp54>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.422.17" 0 0 1 "" 0 "" 0</Bp54>
+        <Bp55>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.680.7" 0 0 1 "" 0 "" 0</Bp55>
         <Bp56>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\metrology\src\metrology_module.c}.126.5" 0 0 1 "" 0 "" 0</Bp56>
-        <Bp57>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.411.15" 0 0 1 "" 0 "" 0</Bp57>
+        <Bp57>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Cloud\src\cloud_module.c}.418.15" 0 0 1 "" 0 "" 0</Bp57>
         <Bp58>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Apps\Sensor\src\Sensor_module.c}.298.1" 0 0 1 "" 0 "" 0</Bp58>
-        <Bp59>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1646.1" 0 0 1 "" 0 "" 0</Bp59>
+        <Bp59>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1713.1" 0 0 1 "" 0 "" 0</Bp59>
         <Bp60>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.427.13" 0 0 1 "" 0 "" 0</Bp60>
-        <Count>61</Count>
+        <Bp61>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\Libs\m2m_modem\src\modem_module.c}.1405.7" 0 0 1 "" 0 "" 0</Bp61>
+        <Count>62</Count>
     </Breakpoints2>
     <Aliases>
         <Count>0</Count>

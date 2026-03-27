@@ -443,6 +443,7 @@ void Modem_TIM_Handler(TIM_HandleTypeDef *htim)
         case MODEM_MQTT_CLIENT_PUBLISH_MESSAGE:
             /* AT#MQTTPUB */  
             //sprintf((char*)Modem_AT_Cmd_Buff,"AT#MQTTPUB=%s,%d,3,0\r",Modem_Counter_Variables.topic, Modem_Counter_Variables.topic_message);//Modem_Counter_Variables.curr_hostname, (int)Modem_Counter_Variables.curr_port_number); 
+            // bernardino updated the code below. Working fine
             char hex_payload[40 * 2 + 1]; // cloud_data size is 40
             
             bin_to_hex(Modem_Counter_Variables.topic_message,
@@ -450,7 +451,7 @@ void Modem_TIM_Handler(TIM_HandleTypeDef *htim)
                hex_payload);
             sprintf((char*)Modem_AT_Cmd_Buff,"AT#MQTTPUB=%s,%s\r",Modem_Counter_Variables.topic, hex_payload);
             
-            // bernardino: parei aqui na quinta-feira
+            
             status = Modem_Transmit_AT_Cmd(strlen((char*)Modem_AT_Cmd_Buff));          
             if(status != MODEM_MODULE_SUCCESS)
             {
@@ -467,7 +468,9 @@ void Modem_TIM_Handler(TIM_HandleTypeDef *htim)
             
         case MODEM_MQTT_CLIENT_SUBSCRIBE_MESSAGE:    
             /* AT#MQTTSUB */  
-            sprintf((char*)Modem_AT_Cmd_Buff,"AT#MQTTSUB=light_status,0,dimmer,0\r",Modem_Counter_Variables.topic,Modem_Counter_Variables.topic_message);//Modem_Counter_Variables.curr_hostname, (int)Modem_Counter_Variables.curr_port_number); 
+            //sprintf((char*)Modem_AT_Cmd_Buff,"AT#MQTTSUB=light_status,0,dimmer,0\r",Modem_Counter_Variables.topic,Modem_Counter_Variables.topic_message);//Modem_Counter_Variables.curr_hostname, (int)Modem_Counter_Variables.curr_port_number); 
+            // bernardino updated this to use the use the new topic (browser_msg)
+            sprintf((char*)Modem_AT_Cmd_Buff,"AT#MQTTSUB=browser_msg,2\r"); 
             status = Modem_Transmit_AT_Cmd(strlen((char*)Modem_AT_Cmd_Buff));          
             if(status != MODEM_MODULE_SUCCESS)
             {
@@ -1334,6 +1337,88 @@ void Process_Modem_Buffer(uint8_t * ptr)
     }
     else if ((((pStr=strstr((char *)process_buffer,"#MQTTRECV:"))) != NULL))
     {
+        // bernardino: TODO: this wasnt implemented so i need to implement it
+      uint8_t foo = 5; //debug
+
+      char* pStrCopy = pStr;
+
+      // example of message received:
+      // "#MQTTRECV: browser_msg,15,10\r\n"
+
+      // parsing pStr to get the dimmer and tti
+      uint8_t first_comma_index = 22;
+      pStr = (pStr + first_comma_index + 1);  // pStr now at start of dimmer
+
+      // dimmer parsing
+      char _chr = pStr[0];
+      uint8_t _chr_count = 0;
+      for (;;) {
+          if (_chr == ',') {
+              break;
+          } else {
+              _chr_count++;
+          }
+          _chr = *(pStr++);
+      }
+      // after the loop:
+      //  - _chr == ',' (the comma after dimmer)
+      //  - pStr points to the first char of TTI
+      //  - _chr_count = number of dimmer digits
+
+      uint8_t _mqtt_dimmer = 0;
+      if (_chr_count > 0 && _chr_count <= 3) {
+          char _tmp_str[4];  
+          memcpy(_tmp_str,
+                 pStrCopy + (first_comma_index + 1),  // start of dimmer
+                 _chr_count);
+          _tmp_str[_chr_count] = '\0';               
+          _mqtt_dimmer = (uint8_t)atoi(_tmp_str);
+      }
+
+      // tti parsing
+      // pStr already points to the first char of TTI
+      char *tti_start = pStr;
+      uint8_t _chr_count2 = 0;
+      _chr = tti_start[0];
+
+      for (;;) {
+          if (_chr == '\r') {   // end of tti field
+              break;
+          } else {
+              _chr_count2++;
+          }
+          _chr = *(pStr++);
+      }
+      // after this loop:
+      //  - _chr == '\r'
+      //  - _chr_count2 = number of TTI digits
+      //  - tti_start still points to first TTI digit
+
+      uint8_t _mqtt_tti = 0;
+      if (_chr_count2 > 0 && _chr_count2 <= 3) {
+          char _tmp_str[4];
+          memcpy(_tmp_str, tti_start, _chr_count2);
+          _tmp_str[_chr_count2] = '\0';            
+          _mqtt_tti = (uint8_t)atoi(_tmp_str);
+      }
+
+      foo = 6;
+      
+      //BERNARDINO SEXTA-FEIRA: MAYBE THE LAST THING MISSING IS TO ACTUALLY SAVE THE
+      // _mqtt_dimmer AND _mqtt_tti VARIABLES INTO THE CONTEXT STRUCT (cloud_data)?
+      
+      modem_instances.modem_event.ok_eval = MODEM_TRUE;
+      // modem_instances.modem_event.event = MODEM_OK_EVENT; // to be or not to be?
+      modem_instances.modem_event.event_pop = MODEM_TRUE;
+      __disable_irq();
+      modem_push_eventbuffer_queue(&modem_instances.event_buff, modem_instances.modem_event);
+      __enable_irq();
+      modem_reset_event(&modem_instances.modem_event); 
+        
+      IO_modem_status_flag.prevent_push_OK_event = MODEM_FALSE;
+      Fillptr=0;
+      memset(process_buffer, 0x00, MODEM_MAX_BUFFER_GLOBAL);         
+      IO_modem_status_flag.sock_read_ongoing = MODEM_FALSE; 
         
     }
     else if ((((pStr=strstr((char *)process_buffer,"#SYSSTART"))) != NULL))

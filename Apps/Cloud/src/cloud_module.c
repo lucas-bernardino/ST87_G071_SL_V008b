@@ -323,12 +323,20 @@ sckt_type = MQTT_TYPE;
           case DEMO_CREATE_MQTT_CONNECT:
              status = Mqtt_Connect_Socket(server_ip,server_port);
              if (status == E_OK) {
-              demo_state = DEMO_MQTT_PUBLISH_STREET_DATA;  
-              // bernardino: if this suceeds, then the modem_module FSM will switch to MODEM_MQTT_CLIENT_SOCKET_OPEN_EVENT state
+              demo_state = DEMO_MQTT_SUBSCRIBE;
              } else {
                demo_state = DEMO_MODEM_ERROR;    
              }
              break;
+             
+          case DEMO_MQTT_SUBSCRIBE:
+             status = Mqtt_Subscribe();
+             if (status == E_OK) {
+              demo_state = DEMO_MQTT_PUBLISH_STREET_DATA;  
+             } else {
+               demo_state = DEMO_MODEM_ERROR;    
+             }
+             break;   
   
           // bernardino added this case
           case DEMO_MQTT_PUBLISH_STREET_DATA:
@@ -359,8 +367,7 @@ sckt_type = MQTT_TYPE;
              status = Mqtt_Publish(topic_street_data, &cloud_data, sizeTest);
              if (status == E_OK) {
               demo_state = DEMO_WAITING_TO_SEND_DATA; 
-              udp_timer = 10000; // 10 secs
-              // bernardino: if this suceeds, then the modem_module FSM will switch to MODEM_MQTT_CLIENT_PUBLISH_MESSAGE state
+              udp_timer = 10000; // 10 secs, still hardcoded
              } else {
                demo_state = DEMO_MODEM_ERROR;    
              }
