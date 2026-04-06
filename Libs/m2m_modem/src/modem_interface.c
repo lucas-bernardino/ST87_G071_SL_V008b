@@ -388,6 +388,7 @@ Modem_Status_t modem_init(void) //modem_config* config)
 //  //HAL_Delay (1000);  
           
 //  /* MQTT configuration */  // bernardino updated
+#ifdef MQTT_DEMO
     Modem_Reset_AT_CMD_Buffer(); 
     sprintf((char*)Modem_AT_Cmd_Buff,"at#mqttcfg= mqtt-st8700-client,20,20,20,20\r"); 
     status = Modem_Transmit_AT_Cmd(strlen((char*)Modem_AT_Cmd_Buff));
@@ -398,6 +399,7 @@ Modem_Status_t modem_init(void) //modem_config* config)
       HAL_GPIO_WritePin(LED_NETWORK_GPIO_Port, LED_NETWORK_Pin, GPIO_PIN_SET);
     }
     HAL_Delay (1000);
+#endif
   
   //Modem attached 
   HAL_GPIO_WritePin(LED_NETWORK_GPIO_Port,  LED_NETWORK_Pin, GPIO_PIN_RESET);

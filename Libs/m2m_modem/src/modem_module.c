@@ -1419,6 +1419,18 @@ void Process_Modem_Buffer(uint8_t * ptr)
       Fillptr=0;
       memset(process_buffer, 0x00, MODEM_MAX_BUFFER_GLOBAL);         
       IO_modem_status_flag.sock_read_ongoing = MODEM_FALSE; 
+      
+      led_cloud.update_state = 1;
+      led_cloud.dimmer       =  _mqtt_dimmer;           
+      led_cloud.tti          =  _mqtt_tti;
+      if (_mqtt_dimmer > 0 ) {
+        led_cloud.state        =  0x05;
+      } else {
+        led_cloud.state        =  0x00;
+      }
+      osMessageQueuePut(LedStatusQueueHandle,&led_cloud , 0, 0);
+      
+      //bernardino todo: Need to update the udp_timer to point to the tti value as well
         
     }
     else if ((((pStr=strstr((char *)process_buffer,"#SYSSTART"))) != NULL))
