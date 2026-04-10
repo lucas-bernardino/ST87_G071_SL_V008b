@@ -387,18 +387,19 @@ Modem_Status_t modem_init(void) //modem_config* config)
 //  } 
 //  //HAL_Delay (1000);  
           
-//  /* MQTT configuration */  
-//  Modem_Reset_AT_CMD_Buffer(); 
-//  //sprintf((char*)Modem_AT_Cmd_Buff,"at#mqttcfg= mqtt-explorer-9bd770bc_1,20,20,20,20\r"); 
-//  sprintf((char*)Modem_AT_Cmd_Buff,"at#mqttcfg= mqtt-st8700-client,20,20,20,20\r"); 
-//  status = Modem_Transmit_AT_Cmd(strlen((char*)Modem_AT_Cmd_Buff));
-//  HAL_GPIO_WritePin(LED_NETWORK_GPIO_Port, LED_NETWORK_Pin, GPIO_PIN_RESET);
-//  if(status == MODEM_MODULE_SUCCESS)
-//  {
-//    status = Modem_Receive_AT_Resp(AT_SHORT_TIMEOUT);  
-//    HAL_GPIO_WritePin(LED_NETWORK_GPIO_Port, LED_NETWORK_Pin, GPIO_PIN_SET);
-//  }
-  //HAL_Delay (1000);
+//  /* MQTT configuration */  // bernardino updated
+#ifdef MQTT_DEMO
+    Modem_Reset_AT_CMD_Buffer(); 
+    sprintf((char*)Modem_AT_Cmd_Buff,"at#mqttcfg= mqtt-st8700-client,20,20,20,20\r"); 
+    status = Modem_Transmit_AT_Cmd(strlen((char*)Modem_AT_Cmd_Buff));
+    HAL_GPIO_WritePin(LED_NETWORK_GPIO_Port, LED_NETWORK_Pin, GPIO_PIN_RESET);
+    if(status == MODEM_MODULE_SUCCESS)
+    {
+      status = Modem_Receive_AT_Resp(AT_SHORT_TIMEOUT);  
+      HAL_GPIO_WritePin(LED_NETWORK_GPIO_Port, LED_NETWORK_Pin, GPIO_PIN_SET);
+    }
+    HAL_Delay (1000);
+#endif
   
   //Modem attached 
   HAL_GPIO_WritePin(LED_NETWORK_GPIO_Port,  LED_NETWORK_Pin, GPIO_PIN_RESET);
@@ -604,12 +605,14 @@ Modem_Status_t modem_socket_mqtt_open(uint8_t * server_ip, uint32_t port_number)
 }
 
 
-Modem_Status_t modem_mqtt_publish(char *Topic, char *Message)
+//bernardino: added len paramter
+Modem_Status_t modem_mqtt_publish(char *Topic, char *Message, uint16_t len)
 {
   Modem_Status_t status = MODEM_MODULE_SUCCESS;
   uint32_t tick_ref;
- 
-  Modem_Queue_Mqtt_Publish_Event(Topic,Message);
+
+  //bernardino: added len paramter
+  Modem_Queue_Mqtt_Publish_Event(Topic,Message, len);
      
   tick_ref = HAL_GetTick();
       

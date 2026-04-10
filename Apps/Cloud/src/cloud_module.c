@@ -87,6 +87,7 @@ typedef enum
     DEMO_CREATE_MQTT_SOCKET,
     DEMO_CREATE_MQTT_CONNECT,
     DEMO_MQTT_SUBSCRIBE,
+    DEMO_MQTT_PUBLISH_STREET_DATA,
     DEMO_MQTT_PUBLISH_ENERGY,
     DEMO_MQTT_PUBLISH_VRMS,
     DEMO_MQTT_PUBLISH_IRMS,
@@ -151,6 +152,11 @@ uint8_t Create_Tcp_Connection (char *server, uint32_t port,uint8_t Sckt_Id);
 uint8_t Check_Socket_Status (uint8_t Sckt_Id);
 uint8_t Close_UDP_Server_Socket (uint8_t sckt_id);
 
+
+
+/// bernardino defines
+char topic_street_data[] = "street_data";  
+
 //extern uint8_t led_state;
 /**
  * @brief   Returns the number of milliseconds since the board began running
@@ -212,6 +218,17 @@ void demo_controller(void)
       }
 #endif      
     }
+ 
+/*
+bernardino: For testing/debug purposes, im just checking to see if mqtt is defined. If it is, then we forget everything we did above 
+and just set the server_port to be 1883 (default mqtt port) and the protocol to be mqtt
+*/
+#ifdef MQTT_DEMO
+server_port = MQTT_PORT;
+memcpy(&Protocol,"MQT",3); // Protocol variable was defined with length of 3, so i dont want to mess around with that
+sckt_type = MQTT_TYPE;
+#endif
+ 
 
     /*check if a reset has happened and set appropriated cloud apps status 
       Obs.: it is called again in datalogger only to clear the reset flags*/
@@ -284,10 +301,15 @@ void demo_controller(void)
               {
                 demo_state = DEMO_WAITING_TO_SEND_DATA;
               }
-              else
+              if (sckt_type == TCP_TYPE) // bernardino, added more checks since now sckt_type can also be mqtt_type instead of just tcp or udp
               {
                 demo_state = DEMO_TCP_CONNECT;
                 try_again=N_TRY-1;
+              }
+              if (sckt_type == MQTT_TYPE) {
+                demo_state = DEMO_CREATE_MQTT_CONNECT;
+                  // bernardino: next is to call Modem_Queue_Mqtt_Client_Open_Event, that internally will change the other FSM to
+                  // MODEM_MQTT_CLIENT_SOCKET_OPEN_EVENT in order to send the mqtt conect stuff
               }
               udp_timer = 0;
             }
@@ -296,6 +318,60 @@ void demo_controller(void)
               demo_state = DEMO_MODEM_ERROR;    
             }                
             break;
+        
+          // bernardino added this case
+          case DEMO_CREATE_MQTT_CONNECT:
+             status = Mqtt_Connect_Socket(server_ip,server_port);
+             if (status == E_OK) {
+              demo_state = DEMO_MQTT_SUBSCRIBE;
+             } else {
+               demo_state = DEMO_MODEM_ERROR;    
+             }
+             break;
+             
+          case DEMO_MQTT_SUBSCRIBE:
+             status = Mqtt_Subscribe();
+             if (status == E_OK) {
+              demo_state = DEMO_MQTT_PUBLISH_STREET_DATA;  
+             } else {
+               demo_state = DEMO_MODEM_ERROR;    
+             }
+             break;   
+  
+          // bernardino added this case
+          case DEMO_MQTT_PUBLISH_STREET_DATA:
+            
+            conn_number++;
+            sizeTest = sizeof(cloud_data);
+#ifdef PCB_1_0
+            cloud_data.Metro_info.energyActive   = 0xFFFFFFFF - Load_metrology_data.energyActive;        /* 4 bytes - int32_t - mwh*/
+            cloud_data.Metro_info.energyReactive = 0xFFFFFFFF - Load_metrology_data.energyReactive+1;    /* 4 bytes - int32_t - mwh*/                  
+#else
+            cloud_data.Metro_info.energyActive   = Load_metrology_data.energyActive;        /* 4 bytes - int32_t - mwh*/
+            cloud_data.Metro_info.energyReactive = Load_metrology_data.energyReactive+1;    /* 4 bytes - int32_t - mwh*/                  
+#endif            
+            cloud_data.Metro_info.rmsvoltage     = Load_metrology_data.rmsvoltage;          /* 4 bytes - int32_t - mVrms */
+            cloud_data.Metro_info.rmscurrent     = Load_metrology_data.rmscurrent;          /* 4 bytes - int32_t - mArms */
+            cloud_data.Metro_info.status.state   = Load_metrology_data.status.state;        /* 2 bytes - uint16 - 0x0001 = ON 0x0000 = OFF */
+            cloud_data.Metro_info.status.dimmer  = Load_metrology_data.status.dimmer;       /* 2 bytes - uint16 */
+            cloud_data.XL_info.Ax                = Load_Sensor_data.Ax;                     /* 4 bytes - float - mg*/
+            cloud_data.XL_info.Ay                = Load_Sensor_data.Ay;                     /* 4 bytes - float - mg*/  
+            cloud_data.XL_info.Az                = Load_Sensor_data.Az;                     /* 4 bytes - float - mg*/
+            cloud_data.XL_info.temp              = Load_Sensor_data.temp;                   /* 4 bytes - float  - dC*/ 
+            cloud_data.tx_cnt                    = conn_number;                             /* 2 bytes - uint16 */
+            cloud_data.tti                       = led_state.tti;                           /* 1 byte - seconds between transmissions */
+
+                                                                                            /* TOTAL = 40 bytes to transmitt */  
+            
+             //bernardino: passing cloud_data like this might be an issue. Verify
+             status = Mqtt_Publish(topic_street_data, &cloud_data, sizeTest);
+             if (status == E_OK) {
+              demo_state = DEMO_WAITING_TO_SEND_DATA; 
+              udp_timer = cloud_data.tti * 1000;
+             } else {
+               demo_state = DEMO_MODEM_ERROR;    
+             }
+             break;
             
           case DEMO_TCP_CONNECT:  
             status = Create_Tcp_Connection (server_ip,server_port,SocketID);
@@ -322,7 +398,11 @@ void demo_controller(void)
             IsST87_Comm_ongoing = false;            
             if (udp_timer==0)
             {
+#ifdef MQTT_DEMO
+              demo_state = DEMO_MQTT_PUBLISH_STREET_DATA;
+#else
               demo_state = DEMO_SEND_UDP_DATA;
+#endif
               IsST87_Comm_ongoing = true;
               try_again = N_TRY;
             }

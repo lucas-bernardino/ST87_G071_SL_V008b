@@ -243,7 +243,10 @@ int main(void)
     HAL_Delay(1000);
   }
 #else
-  sckt_type = UDP_TYPE;
+  // bernardino: change default sckt_type in debug mode to be TCP rather than UDP
+  //sckt_type = UDP_TYPE;
+  sckt_type = TCP_TYPE;
+  
 #endif
   
 

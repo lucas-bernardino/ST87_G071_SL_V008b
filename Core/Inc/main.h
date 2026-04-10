@@ -89,11 +89,14 @@ void MX_TIM1_Init(void);
 
 /* USER CODE BEGIN Private defines */
 
-#define COMM_DEBUG
-//#define DEBUG_MODE
+// bernardino: defined DEBUG_MODE instead of normal COMM_DEBUG
+//#define COMM_DEBUG
+#define DEBUG_MODE
 
-//#define AME_DEMO
-#define EU_DEMO
+
+#define AME_DEMO
+// bernardino: commented the line below to run in US mode
+//#define EU_DEMO
 
 #define UDP_ECHO_SERVER            1777               /* Echo Server for UDP messages */
 #define TCP_ECHO_SERVER            1778               /* Echo Server for UDP messages */
@@ -102,11 +105,16 @@ void MX_TIM1_Init(void);
 #define EU_UDP_SERVER_PORT         1338               /* EU udp server port */
 #define EU_UDP_SERVER_PORT2        1339               /* EU udp server port 2*/
 
-#define US_TCP_SERVER_PORT         1900               /* US tcp server port */
+//#define US_TCP_SERVER_PORT         1900               /* US tcp server port */
+#define US_TCP_SERVER_PORT         1340               /* US tcp server port FOR JOINSTLAB.COM*/ //bernardino added
+
+
 #define EU_TCP_SERVER_PORT         1901               /* EU tcp server port */
 #define EU_TCP_SERVER_PORT2        1902               /* EU tcp server port */
 
-#define SERVER_IP              "162.248.102.96"       /* joinstlab.net */
+//#define SERVER_IP              "162.248.102.96"       /* joinstlab.net */
+
+#define SERVER_IP              "162.248.100.86"       /* joinstlab.com */ //bernardino addded
 
 #define APN_TIM                "nbiot.gsim"           /* apn for TIM */
 #define APN_AMARI              "Default"              /* apn for Amari callbox */
@@ -119,10 +127,11 @@ void MX_TIM1_Init(void);
 #define EU_BANDS               "20,8" 
 #define US_BANDS               "4,12"  
 #define BRA_BANDS              "28,3" 
-#define BANDS_APP              (EU_BANDS)
+#define BANDS_APP              (BRA_BANDS) // bernardino: selected BRA_BANDS instead of EU_BANDS
 
 #define TCP_TYPE               0
 #define UDP_TYPE               1
+#define MQTT_TYPE              2 // bernardino added
 
 #define TTI_DEFAULT 10     /* interval between transmissions */  
 
@@ -132,6 +141,12 @@ extern uint8_t port_number;
 //#define MEMS_TYPE               (LIS2DUX12)
 //#define MEMS_TYPE               (LIS2DU12) 
 //#define MEMS_TYPE               (LIS2DUX12) 
+
+
+// MQTT CONFIG bernardino
+#define MQTT_DEMO // comment this line if not using mqtt. The check is done in line 221 in file cloud_module.c
+#define MQTT_PORT 1883
+
 
 
 /* USER CODE END Private defines */

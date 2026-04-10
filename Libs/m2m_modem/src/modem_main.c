@@ -580,10 +580,11 @@ uint8_t Mqtt_Connect_Socket (char *server, uint32_t port)
 }
 
 
-uint8_t Mqtt_Publish (char *topic, char *mes) 
+// bernardino: added len parameter
+uint8_t Mqtt_Publish (char *topic, char *mes, uint16_t len) 
 {
   Modem_Status_t status = MODEM_MODULE_SUCCESS;
-  status = modem_mqtt_publish(topic,mes);
+  status = modem_mqtt_publish(topic,mes, len);
   return status;
 }
 
