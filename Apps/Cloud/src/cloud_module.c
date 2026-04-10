@@ -367,7 +367,7 @@ sckt_type = MQTT_TYPE;
              status = Mqtt_Publish(topic_street_data, &cloud_data, sizeTest);
              if (status == E_OK) {
               demo_state = DEMO_WAITING_TO_SEND_DATA; 
-              udp_timer = 10000; // 10 secs, still hardcoded
+              udp_timer = cloud_data.tti * 1000;
              } else {
                demo_state = DEMO_MODEM_ERROR;    
              }
